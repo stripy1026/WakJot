@@ -5,7 +5,7 @@
  * @format
  */
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Alert,
   Pressable,
@@ -16,26 +16,58 @@ import {
   View,
 } from 'react-native';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const STORAGE_KEY = '@jot';
+
 function App(): JSX.Element {
   const [text, setText] = useState('');
 
-  const saveText = () => {
+  const saveText = async () => {
     if (text === '') {
       return;
     }
-    console.log('SAVE');
-    console.log(text);
+    try {
+      await AsyncStorage.setItem(STORAGE_KEY, text);
+    } catch (e) {
+      Alert.alert('저장 실패', '저장에 실패했습니다');
+    }
   };
 
-  const clearText = () => {
+  const clearText = async () => {
     Alert.alert('메모 비우기', '메모를 전부 삭제하시겠습니까?', [
       {
         text: '아니요',
         style: 'cancel',
       },
-      {text: '네', onPress: () => setText('')},
+      {
+        text: '네',
+        onPress: async () => {
+          try {
+            await AsyncStorage.setItem(STORAGE_KEY, '');
+          } catch (e) {
+            Alert.alert('삭제 실패', '저장소가 삭제되지 않았습니다');
+          }
+          setText('');
+        },
+      },
     ]);
   };
+
+  const loadText = async () => {
+    try {
+      const value = await AsyncStorage.getItem(STORAGE_KEY);
+      if (value !== null) {
+        setText(value);
+      }
+    } catch (e) {
+      Alert.alert('불러오기 실패', '다시 로드를 시도해주세요');
+    }
+  };
+
+  useEffect(() => {
+    loadText();
+  }, []);
 
   return (
     <View style={styles.container}>
