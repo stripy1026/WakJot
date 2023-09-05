@@ -7,6 +7,7 @@
 
 import React, {useState} from 'react';
 import {
+  Alert,
   Pressable,
   StatusBar,
   StyleSheet,
@@ -27,9 +28,13 @@ function App(): JSX.Element {
   };
 
   const clearText = () => {
-    console.log('CLEAR');
-    console.log(text);
-    setText('');
+    Alert.alert('메모 비우기', '메모를 전부 삭제하시겠습니까?', [
+      {
+        text: '아니요',
+        style: 'cancel',
+      },
+      {text: '네', onPress: () => setText('')},
+    ]);
   };
 
   return (
