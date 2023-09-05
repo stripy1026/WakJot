@@ -5,14 +5,56 @@
  * @format
  */
 
-import React from 'react';
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {
+  Pressable,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 
 function App(): JSX.Element {
+  const [text, setText] = useState('');
+
+  const saveText = () => {
+    if (text === '') {
+      return;
+    }
+    console.log('SAVE');
+    console.log(text);
+  };
+
+  const clearText = () => {
+    console.log('CLEAR');
+    console.log(text);
+    setText('');
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="black" />
-      <Text style={styles.text}>Hello, My First React Native Project!</Text>
+      <TextInput
+        multiline
+        style={styles.input}
+        onChangeText={payload => setText(payload)}
+        value={text}
+        placeholder="뭐든지 써보세요"
+        placeholderTextColor="white"
+      />
+      <View style={styles.buttonContainer}>
+        <Pressable
+          style={{...styles.button, flex: 1, backgroundColor: 'blue'}}
+          onPress={clearText}>
+          <Text>삭제</Text>
+        </Pressable>
+        <Pressable
+          style={{...styles.button, flex: 2, backgroundColor: 'white'}}
+          onPress={saveText}>
+          <Text>저장</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -21,12 +63,22 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'black',
     flex: 1,
-    justifyContent: 'center',
   },
-  text: {
+  input: {
+    flex: 1,
+    backgroundColor: 'grey',
     color: 'white',
-    alignSelf: 'center',
     fontSize: 16,
+    margin: 10,
+    textAlignVertical: 'top',
+  },
+  buttonContainer: {
+    backgroundColor: 'grey',
+    flexDirection: 'row',
+  },
+  button: {
+    alignItems: 'center',
+    padding: 10,
   },
 });
 
