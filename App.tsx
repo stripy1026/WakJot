@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -70,35 +71,33 @@ function App(): JSX.Element {
   }, []);
 
   return (
-    <View style={styles.background}>
+    <View style={styles.container}>
+      <StatusBar backgroundColor={'transparent'} translucent={true} />
       <ImageBackground
         source={require('./assets/temp_background.jpeg')}
         resizeMode="cover"
         style={styles.backgroundImage}>
-        <StatusBar backgroundColor={'transparent'} translucent={true} />
-        <View style={styles.container}>
-          <View style={styles.textContainer}>
-            <TextInput
-              multiline
-              style={styles.input}
-              onChangeText={payload => setText(payload)}
-              value={text}
-              placeholder="뭐든지 써보세요"
-              placeholderTextColor="white"
-            />
-          </View>
-          <View style={styles.buttonContainer}>
-            <Pressable
-              style={{...styles.button, flex: 1, backgroundColor: 'grey'}}
-              onPress={clearText}>
-              <Text>삭제</Text>
-            </Pressable>
-            <Pressable
-              style={{...styles.button, flex: 2, backgroundColor: 'white'}}
-              onPress={saveText}>
-              <Text>저장</Text>
-            </Pressable>
-          </View>
+        <View style={styles.textContainer}>
+          <TextInput
+            multiline
+            style={styles.input}
+            onChangeText={payload => setText(payload)}
+            value={text}
+            placeholder="뭐든지 써보세요"
+            placeholderTextColor="white"
+          />
+        </View>
+        <View style={styles.buttonContainer}>
+          <Pressable
+            style={{...styles.button, flex: 1, backgroundColor: 'grey'}}
+            onPress={clearText}>
+            <Text>삭제</Text>
+          </Pressable>
+          <Pressable
+            style={{...styles.button, flex: 2, backgroundColor: 'white'}}
+            onPress={saveText}>
+            <Text>저장</Text>
+          </Pressable>
         </View>
       </ImageBackground>
     </View>
@@ -106,15 +105,12 @@ function App(): JSX.Element {
 }
 
 const styles = StyleSheet.create({
-  background: {
+  container: {
     flex: 1,
   },
   backgroundImage: {
     flex: 1,
     justifyContent: 'flex-end',
-  },
-  container: {
-    flex: 0.6,
   },
   textContainer: {
     flex: 1,
@@ -124,7 +120,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     color: 'white',
-    fontSize: 16,
+    fontSize: 20,
     margin: 10,
     textAlignVertical: 'top',
   },
