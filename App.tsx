@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import RNExitApp from 'react-native-exit-app';
 
 const STORAGE_KEY = '@jot';
 
@@ -24,11 +25,9 @@ function App(): JSX.Element {
   const [text, setText] = useState('');
 
   const saveText = async () => {
-    if (text === '') {
-      return;
-    }
     try {
       await AsyncStorage.setItem(STORAGE_KEY, text);
+      RNExitApp.exitApp();
     } catch (e) {
       Alert.alert('저장 실패', '저장에 실패했습니다');
     }
