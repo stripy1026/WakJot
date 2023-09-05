@@ -8,6 +8,7 @@
 import React, {useEffect, useState} from 'react';
 import {
   Alert,
+  ImageBackground,
   Pressable,
   StatusBar,
   StyleSheet,
@@ -69,47 +70,65 @@ function App(): JSX.Element {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <StatusBar backgroundColor="black" />
-      <TextInput
-        multiline
-        style={styles.input}
-        onChangeText={payload => setText(payload)}
-        value={text}
-        placeholder="뭐든지 써보세요"
-        placeholderTextColor="white"
-      />
-      <View style={styles.buttonContainer}>
-        <Pressable
-          style={{...styles.button, flex: 1, backgroundColor: 'blue'}}
-          onPress={clearText}>
-          <Text>삭제</Text>
-        </Pressable>
-        <Pressable
-          style={{...styles.button, flex: 2, backgroundColor: 'white'}}
-          onPress={saveText}>
-          <Text>저장</Text>
-        </Pressable>
-      </View>
+    <View style={styles.background}>
+      <ImageBackground
+        source={require('./assets/temp_background.jpeg')}
+        resizeMode="cover"
+        style={styles.backgroundImage}>
+        <StatusBar backgroundColor={'transparent'} translucent={true} />
+        <View style={styles.container}>
+          <View style={styles.textContainer}>
+            <TextInput
+              multiline
+              style={styles.input}
+              onChangeText={payload => setText(payload)}
+              value={text}
+              placeholder="뭐든지 써보세요"
+              placeholderTextColor="white"
+            />
+          </View>
+          <View style={styles.buttonContainer}>
+            <Pressable
+              style={{...styles.button, flex: 1, backgroundColor: 'grey'}}
+              onPress={clearText}>
+              <Text>삭제</Text>
+            </Pressable>
+            <Pressable
+              style={{...styles.button, flex: 2, backgroundColor: 'white'}}
+              onPress={saveText}>
+              <Text>저장</Text>
+            </Pressable>
+          </View>
+        </View>
+      </ImageBackground>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'black',
+  background: {
     flex: 1,
+  },
+  backgroundImage: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+  container: {
+    flex: 0.6,
+  },
+  textContainer: {
+    flex: 1,
+    backgroundColor: 'black',
+    opacity: 0.8,
   },
   input: {
     flex: 1,
-    backgroundColor: 'grey',
     color: 'white',
     fontSize: 16,
     margin: 10,
     textAlignVertical: 'top',
   },
   buttonContainer: {
-    backgroundColor: 'grey',
     flexDirection: 'row',
   },
   button: {
