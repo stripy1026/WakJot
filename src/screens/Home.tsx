@@ -11,6 +11,8 @@ import {
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNExitApp from 'react-native-exit-app';
+import {requestWidgetUpdate} from 'react-native-android-widget';
+import {HelloWidget} from '@/widgets/HelloWidget';
 
 const STORAGE_KEY = '@jot';
 
@@ -60,6 +62,16 @@ export default function HomeScreen(): JSX.Element {
   useEffect(() => {
     loadText();
   }, []);
+
+  useEffect(() => {
+    requestWidgetUpdate({
+      widgetName: 'Hello',
+      renderWidget: () => <HelloWidget text={text} />,
+      widgetNotFound: () => {
+        return;
+      },
+    });
+  }, [text]);
 
   return (
     <View style={styles.container}>

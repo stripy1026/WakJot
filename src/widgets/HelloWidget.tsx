@@ -1,7 +1,11 @@
 import React from 'react';
 import {FlexWidget, TextWidget} from 'react-native-android-widget';
 
-export function HelloWidget() {
+type HelloWidgetProps = {
+  text: string;
+};
+
+export function HelloWidget({text}: HelloWidgetProps) {
   return (
     <FlexWidget
       style={{
@@ -12,7 +16,7 @@ export function HelloWidget() {
       }}
       clickAction="OPEN_APP">
       <TextWidget
-        text="Hello"
+        text={text}
         style={{
           fontSize: 16,
           margin: 10,
