@@ -13,8 +13,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNExitApp from 'react-native-exit-app';
 import {requestWidgetUpdate} from 'react-native-android-widget';
 import {HelloWidget} from '@/widgets/HelloWidget';
-
-const STORAGE_KEY = '@jot';
+import {STORAGE_KEY, color} from '@/store/store';
 
 export default function HomeScreen(): JSX.Element {
   const [text, setText] = useState('');
@@ -31,11 +30,11 @@ export default function HomeScreen(): JSX.Element {
   const clearText = async () => {
     Alert.alert('메모 비우기', '메모를 전부 삭제하시겠습니까?', [
       {
-        text: '아니요',
+        text: '잠깐만요',
         style: 'cancel',
       },
       {
-        text: '네',
+        text: '킹아',
         onPress: async () => {
           try {
             await AsyncStorage.setItem(STORAGE_KEY, '');
@@ -87,20 +86,26 @@ export default function HomeScreen(): JSX.Element {
             style={styles.input}
             onChangeText={payload => setText(payload)}
             value={text}
-            placeholder="뭐든지 써보세요"
-            placeholderTextColor="white"
           />
         </View>
         <View style={styles.buttonContainer}>
           <Pressable
-            style={{...styles.button, flex: 1, backgroundColor: 'grey'}}
+            style={{
+              ...styles.button,
+              flex: 1,
+              backgroundColor: color.lightGrey,
+            }}
             onPress={clearText}>
-            <Text>삭제</Text>
+            <Text style={styles.buttonText}>삭제</Text>
           </Pressable>
           <Pressable
-            style={{...styles.button, flex: 2, backgroundColor: 'white'}}
+            style={{
+              ...styles.button,
+              flex: 2,
+              backgroundColor: color.darkGreen,
+            }}
             onPress={saveText}>
-            <Text>저장</Text>
+            <Text style={styles.buttonText}>JOT</Text>
           </Pressable>
         </View>
       </ImageBackground>
@@ -134,5 +139,8 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     padding: 10,
+  },
+  buttonText: {
+    fontWeight: '700',
   },
 });

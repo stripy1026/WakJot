@@ -4,12 +4,11 @@ import type {WidgetTaskHandlerProps} from 'react-native-android-widget';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import {HelloWidget} from '@/widgets/HelloWidget';
+import {STORAGE_KEY} from '@/store/store';
 
 const nameToWidget = {
   Hello: HelloWidget,
 };
-
-const STORAGE_KEY = '@jot';
 
 export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
   const widgetInfo = props.widgetInfo;
