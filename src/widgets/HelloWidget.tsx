@@ -7,17 +7,17 @@ export function HelloWidget() {
       style={{
         height: 'match_parent',
         width: 'match_parent',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#ffffff',
+        backgroundColor: `rgba(${0}, ${0}, ${0}, ${0.7})`,
         borderRadius: 16,
-      }}>
+      }}
+      clickAction="OPEN_APP">
       <TextWidget
-        text="Hello, Widget!"
+        text="Hello"
         style={{
-          fontSize: 32,
+          fontSize: 16,
+          margin: 10,
           fontFamily: 'Inter',
-          color: '#000000',
+          color: '#ffffff',
         }}
       />
     </FlexWidget>

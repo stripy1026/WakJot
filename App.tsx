@@ -8,7 +8,7 @@ function App(): JSX.Element {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={'transparent'} translucent={true} />
-      {/* <HomeScreen /> */}
+      <HomeScreen />
       <HelloWidgetPreviewScreen />
     </View>
   );

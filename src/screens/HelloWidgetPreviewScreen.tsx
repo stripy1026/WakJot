@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ImageBackground, StyleSheet, View} from 'react-native';
 import {WidgetPreview} from 'react-native-android-widget';
 
 import {HelloWidget} from '@/widgets/HelloWidget';
@@ -7,11 +7,15 @@ import {HelloWidget} from '@/widgets/HelloWidget';
 export function HelloWidgetPreviewScreen() {
   return (
     <View style={styles.container}>
-      <WidgetPreview
-        renderWidget={() => <HelloWidget />}
-        width={320}
-        height={200}
-      />
+      <ImageBackground
+        source={require('@/assets/temp_background.jpeg')}
+        resizeMode="cover">
+        <WidgetPreview
+          renderWidget={() => <HelloWidget />}
+          width={320}
+          height={200}
+        />
+      </ImageBackground>
     </View>
   );
 }
