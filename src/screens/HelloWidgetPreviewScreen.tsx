@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {WidgetPreview} from 'react-native-android-widget';
 
-import {HelloWidget} from '@/widget/HelloWidget';
+import {HelloWidget} from '@/widgets/HelloWidget';
 
 export function HelloWidgetPreviewScreen() {
   return (

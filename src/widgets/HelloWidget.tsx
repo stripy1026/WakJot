@@ -13,7 +13,7 @@ export function HelloWidget() {
         borderRadius: 16,
       }}>
       <TextWidget
-        text="Hello"
+        text="Hello, Widget!"
         style={{
           fontSize: 32,
           fontFamily: 'Inter',
