@@ -22,11 +22,8 @@ export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
   switch (props.widgetAction) {
     case 'WIDGET_UPDATE':
     case 'WIDGET_ADDED':
-      props.renderWidget(<Widget text={data} />);
-      break;
-
     case 'WIDGET_RESIZED':
-      // Not needed for now
+      props.renderWidget(<Widget text={data} />);
       break;
 
     case 'WIDGET_DELETED':
