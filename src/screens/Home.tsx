@@ -15,6 +15,9 @@ import {requestWidgetUpdate} from 'react-native-android-widget';
 import {HelloWidget} from '@/widgets/HelloWidget';
 import {STORAGE_KEY, color} from '@/store/store';
 
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import ThumbWakDo from '@/assets/thumb_wakdo.svg';
+
 export default function HomeScreen(): JSX.Element {
   const [text, setText] = useState('');
 
@@ -96,7 +99,9 @@ export default function HomeScreen(): JSX.Element {
               backgroundColor: color.lightGrey,
             }}
             onPress={clearText}>
-            <Text style={styles.buttonText}>삭제</Text>
+            <View style={styles.buttonContent}>
+              <FontAwesomeIcon size={16} icon="trash" />
+            </View>
           </Pressable>
           <Pressable
             style={{
@@ -105,7 +110,10 @@ export default function HomeScreen(): JSX.Element {
               backgroundColor: color.darkGreen,
             }}
             onPress={saveText}>
-            <Text style={styles.buttonText}>JOT</Text>
+            <View style={styles.buttonContent}>
+              <Text style={styles.buttonText}>JOT</Text>
+              <ThumbWakDo width={40} height={40} fill={color.darkGreen} />
+            </View>
           </Pressable>
         </View>
       </ImageBackground>
@@ -135,12 +143,15 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: 'row',
+    alignItems: 'center',
+    height: 40,
   },
   button: {
     alignItems: 'center',
-    padding: 10,
   },
+  buttonContent: {height: 40, flexDirection: 'row', alignItems: 'center'},
   buttonText: {
     fontWeight: '700',
+    fontSize: 20,
   },
 });
