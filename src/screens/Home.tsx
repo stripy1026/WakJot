@@ -78,7 +78,7 @@ export default function HomeScreen(): JSX.Element {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('@/assets/temp_background.jpeg')}
+        source={require('@/assets/background2.jpg')}
         resizeMode="cover"
         style={styles.backgroundImage}>
         <View style={styles.textContainer}>
