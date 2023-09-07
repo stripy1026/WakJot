@@ -27,7 +27,7 @@
       <receiver
           android:name=".widget.Hello"
           android:exported="false"
-          android:label="My Hello Widget">
+          android:label="왁JOT">
           <intent-filter>
               <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
               <action android:name="com.wakjot.WIDGET_CLICK" />
