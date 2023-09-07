@@ -100,7 +100,11 @@ export default function HomeScreen(): JSX.Element {
             }}
             onPress={clearText}>
             <View style={styles.buttonContent}>
-              <FontAwesomeIcon size={16} icon="trash" />
+              <FontAwesomeIcon
+                style={{marginBottom: 5}}
+                size={20}
+                icon="trash"
+              />
             </View>
           </Pressable>
           <Pressable
@@ -149,9 +153,10 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
   },
-  buttonContent: {height: 40, flexDirection: 'row', alignItems: 'center'},
+  buttonContent: {height: 50, flexDirection: 'row', alignItems: 'center'},
   buttonText: {
+    marginBottom: 5,
     fontWeight: '700',
-    fontSize: 20,
+    fontSize: 25,
   },
 });
