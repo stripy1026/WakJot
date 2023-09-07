@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">왁JOT</string>
-    <string name="widget_hello_description" translatable="false">우왁굳과 함께하는 빠른 메모</string>
+    <string name="widget_hello_description" translatable="false">왁JOT 빠른 메모</string>
 </resources>

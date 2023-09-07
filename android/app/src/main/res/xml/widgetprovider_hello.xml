@@ -12,8 +12,5 @@
 
     android:resizeMode="none"
 
-    android:configure="com.wakjot.WidgetConfigurationActivity"
-    android:widgetFeatures="reconfigurable"
-
     android:widgetCategory="home_screen">
 </appwidget-provider>
