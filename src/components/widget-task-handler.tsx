@@ -15,9 +15,7 @@ export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
   const Widget =
     nameToWidget[widgetInfo.widgetName as keyof typeof nameToWidget];
 
-  const data =
-    (await AsyncStorage.getItem(STORAGE_KEY)) ??
-    '데이터를 불러오지 못했습니다.';
+  const data = (await AsyncStorage.getItem(STORAGE_KEY)) ?? '';
 
   switch (props.widgetAction) {
     case 'WIDGET_UPDATE':

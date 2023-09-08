@@ -143,6 +143,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     margin: 10,
+    marginTop: 20,
     textAlignVertical: 'top',
   },
   buttonContainer: {
