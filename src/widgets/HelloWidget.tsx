@@ -11,7 +11,7 @@ export function HelloWidget({text}: HelloWidgetProps) {
       style={{
         height: 'match_parent',
         width: 'match_parent',
-        backgroundColor: `rgba(${0}, ${0}, ${0}, ${0.7})`,
+        backgroundColor: `rgba(${0}, ${0}, ${0}, ${0.6})`,
         borderRadius: 16,
       }}
       clickAction="OPEN_APP">

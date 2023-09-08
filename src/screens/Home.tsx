@@ -136,14 +136,14 @@ const styles = StyleSheet.create({
   textContainer: {
     flex: 1,
     backgroundColor: 'black',
-    opacity: 0.8,
+    opacity: 0.7,
   },
   input: {
     flex: 1,
     color: 'white',
     fontSize: 20,
     margin: 10,
-    marginTop: 20,
+    marginTop: 30,
     textAlignVertical: 'top',
   },
   buttonContainer: {
