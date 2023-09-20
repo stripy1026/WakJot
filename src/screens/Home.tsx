@@ -23,8 +23,10 @@ import {RootStackParamList} from '@/store/NavigationType';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
-export default function HomeScreen({navigation}: Props): JSX.Element {
+export default function HomeScreen({route, navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
+
+  console.log(route.params.theme);
 
   const saveText = async () => {
     try {

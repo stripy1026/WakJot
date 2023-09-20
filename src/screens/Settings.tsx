@@ -10,7 +10,22 @@ export const Settings = ({navigation}: Props): JSX.Element => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Settings</Text>
-      <Button title="Go Home" onPress={() => navigation.goBack()} />
+      <Button
+        title="LILPA"
+        onPress={() =>
+          navigation.navigate('HomeScreen', {
+            theme: 'Lilpa',
+          })
+        }
+      />
+      <Button
+        title="WAKGOOD"
+        onPress={() =>
+          navigation.navigate('HomeScreen', {
+            theme: 'Wakgood',
+          })
+        }
+      />
     </View>
   );
 };

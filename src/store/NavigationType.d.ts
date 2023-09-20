@@ -1,4 +1,4 @@
 export type RootStackParamList = {
-  HomeScreen: undefined;
+  HomeScreen: {theme: string};
   Settings: undefined;
 };

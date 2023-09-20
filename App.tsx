@@ -22,7 +22,11 @@ function App(): JSX.Element {
       <StatusBar backgroundColor={'transparent'} translucent={true} />
       <NavigationContainer>
         <Stack.Navigator initialRouteName="HomeScreen">
-          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+            initialParams={{theme: 'Wakgood'}}
+          />
           <Stack.Screen name="Settings" component={Settings} />
         </Stack.Navigator>
       </NavigationContainer>
