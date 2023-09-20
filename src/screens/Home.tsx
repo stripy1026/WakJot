@@ -21,12 +21,15 @@ import ThumbWakDo from '@/assets/thumb_wakdo.svg';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@/store/NavigationType';
 
+import {ThemeProps, themeMap} from '@/store/themeMap';
+
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
 export default function HomeScreen({route, navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
 
-  console.log(route.params.theme);
+  const {backgroundImage}: ThemeProps =
+    themeMap[route.params.theme as keyof typeof themeMap];
 
   const saveText = async () => {
     try {
@@ -85,7 +88,7 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('@/assets/background2.jpg')}
+        source={backgroundImage}
         resizeMode="cover"
         style={styles.backgroundImage}>
         <View style={styles.textContainer}>

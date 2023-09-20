@@ -11,7 +11,17 @@ export const Settings = ({navigation}: Props): JSX.Element => {
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Settings</Text>
       <Button
-        title="LILPA"
+        title="Wakgood"
+        onPress={() =>
+          navigation.navigate({
+            name: 'HomeScreen',
+            params: {theme: 'Wakgood'},
+            merge: true,
+          })
+        }
+      />
+      <Button
+        title="Lilpa"
         onPress={() =>
           navigation.navigate({
             name: 'HomeScreen',
@@ -21,11 +31,11 @@ export const Settings = ({navigation}: Props): JSX.Element => {
         }
       />
       <Button
-        title="WAKGOOD"
+        title="VIichan"
         onPress={() =>
           navigation.navigate({
             name: 'HomeScreen',
-            params: {theme: 'Wakgood'},
+            params: {theme: 'VIichan'},
             merge: true,
           })
         }
