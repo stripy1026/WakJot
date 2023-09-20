@@ -13,16 +13,20 @@ export const Settings = ({navigation}: Props): JSX.Element => {
       <Button
         title="LILPA"
         onPress={() =>
-          navigation.navigate('HomeScreen', {
-            theme: 'Lilpa',
+          navigation.navigate({
+            name: 'HomeScreen',
+            params: {theme: 'Lilpa'},
+            merge: true,
           })
         }
       />
       <Button
         title="WAKGOOD"
         onPress={() =>
-          navigation.navigate('HomeScreen', {
-            theme: 'Wakgood',
+          navigation.navigate({
+            name: 'HomeScreen',
+            params: {theme: 'Wakgood'},
+            merge: true,
           })
         }
       />

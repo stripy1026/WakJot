@@ -11,6 +11,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Settings} from '@/screens/Settings';
 
 import {RootStackParamList} from '@/store/NavigationType';
+import {color} from '@/store/store';
 
 library.add(fas);
 
@@ -26,8 +27,22 @@ function App(): JSX.Element {
             name="HomeScreen"
             component={HomeScreen}
             initialParams={{theme: 'Wakgood'}}
+            options={{headerShown: false}}
           />
-          <Stack.Screen name="Settings" component={Settings} />
+          <Stack.Screen
+            name="Settings"
+            component={Settings}
+            options={{
+              title: '설정',
+              headerStyle: {
+                backgroundColor: color.darkGreen,
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
