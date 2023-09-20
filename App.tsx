@@ -6,13 +6,24 @@ import HomeScreen from '@/screens/Home';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Settings} from '@/screens/Settings';
+
 library.add(fas);
+
+const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={'transparent'} translucent={true} />
-      <HomeScreen />
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="HomeScreen">
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="Settings" component={Settings} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </View>
   );
 }
