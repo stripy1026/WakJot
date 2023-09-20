@@ -10,9 +10,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Settings} from '@/screens/Settings';
 
+import {RootStackParamList} from '@/store/NavigationType';
+
 library.add(fas);
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App(): JSX.Element {
   return (

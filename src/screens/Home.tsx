@@ -18,7 +18,12 @@ import {STORAGE_KEY, color} from '@/store/store';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import ThumbWakDo from '@/assets/thumb_wakdo.svg';
 
-export default function HomeScreen(): JSX.Element {
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '@/store/NavigationType';
+
+type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
+
+export default function HomeScreen({navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
 
   const saveText = async () => {
@@ -91,6 +96,15 @@ export default function HomeScreen(): JSX.Element {
             value={text}
           />
         </View>
+        <Pressable
+          style={{
+            ...styles.button,
+            flex: 1,
+            backgroundColor: color.lightGrey,
+          }}
+          onPress={() => navigation.navigate('Settings')}>
+          <Text>Go Settings</Text>
+        </Pressable>
         <View style={styles.buttonContainer}>
           <Pressable
             style={{
