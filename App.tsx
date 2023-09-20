@@ -41,6 +41,7 @@ function App(): JSX.Element {
               headerTitleStyle: {
                 fontWeight: 'bold',
               },
+              headerTitleAlign: 'center',
             }}
           />
         </Stack.Navigator>
