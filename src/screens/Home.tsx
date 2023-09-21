@@ -16,12 +16,12 @@ import {HelloWidget} from '@/widgets/HelloWidget';
 import {STORAGE_KEY, color} from '@/store/store';
 
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import ThumbWakDo from '@/assets/thumb_wakdo.svg';
 
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@/store/NavigationType';
 
 import {ThemeProps, themeMap} from '@/store/themeMap';
+import {SvgButtonPack} from '@/components/SvgButtonPack';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
@@ -135,7 +135,7 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
             onPress={saveText}>
             <View style={styles.buttonContent}>
               <Text style={styles.buttonText}>JOT</Text>
-              <ThumbWakDo width={40} height={40} fill={color.darkGreen} />
+              <SvgButtonPack theme={route.params.theme} />
             </View>
           </Pressable>
         </View>
