@@ -17,13 +17,23 @@ type ButtonPackProps = {
   onPress: ((event: GestureResponderEvent) => void) | null | undefined;
 };
 
-export const SvgButtonPack = ({theme, onPress: saveText}: ButtonPackProps) => {
+const themeColorMap = {
+  Wakgood: color.darkGreen,
+  Ine: color.IneViolet,
+  Jingburger: color.JingYellow,
+  Lilpa: color.LilNavy,
+  Jururu: color.RuruPink,
+  Gosegu: color.SeguBlue,
+  VIichan: color.ChanGreen,
+};
+
+export const JotButtonPack = ({theme, onPress: saveText}: ButtonPackProps) => {
   return (
     <Pressable
       style={{
         ...styles.button,
         flex: 2,
-        backgroundColor: color.darkGreen,
+        backgroundColor: themeColorMap[theme as keyof typeof themeColorMap],
       }}
       onPress={saveText}>
       <View style={styles.buttonContent}>

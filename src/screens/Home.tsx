@@ -21,7 +21,7 @@ import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@/store/NavigationType';
 
 import {ThemeProps, themeMap} from '@/store/themeMap';
-import {SvgButtonPack} from '@/components/SvgButtonPack';
+import {JotButtonPack} from '@/components/JotButtonPack';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
@@ -126,7 +126,7 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
               />
             </View>
           </Pressable>
-          <SvgButtonPack theme={route.params.theme} onPress={saveText} />
+          <JotButtonPack theme={route.params.theme} onPress={saveText} />
         </View>
       </ImageBackground>
     </View>
