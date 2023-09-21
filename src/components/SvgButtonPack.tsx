@@ -16,22 +16,22 @@ export const SvgButtonPack = ({theme}: ButtonPackProps) => {
         <ThumbWakDo width={40} height={40} fill={color.darkGreen} />
       )}
       {theme === 'Ine' && (
-        <TmpSvg width={40} height={40} fill={color.darkGreen} />
+        <TmpSvg width={40} height={40} fill={color.IneViolet} />
       )}
       {theme === 'Jingburger' && (
-        <ThumbWakDo width={40} height={40} fill={color.darkGreen} />
+        <ThumbWakDo width={40} height={40} fill={color.JingYellow} />
       )}
       {theme === 'Lilpa' && (
-        <TmpSvg width={40} height={40} fill={color.darkGreen} />
+        <TmpSvg width={40} height={40} fill={color.LilNavy} />
       )}
       {theme === 'Jururu' && (
-        <ThumbWakDo width={40} height={40} fill={color.darkGreen} />
+        <ThumbWakDo width={40} height={40} fill={color.RuruPink} />
       )}
       {theme === 'Gosegu' && (
-        <TmpSvg width={40} height={40} fill={color.darkGreen} />
+        <TmpSvg width={40} height={40} fill={color.SeguBlue} />
       )}
       {theme === 'VIichan' && (
-        <ThumbWakDo width={40} height={40} fill={color.darkGreen} />
+        <ThumbWakDo width={40} height={40} fill={color.ChanGreen} />
       )}
     </View>
   );
