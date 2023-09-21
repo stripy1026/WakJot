@@ -12,6 +12,8 @@ import {Settings} from '@/screens/Settings';
 
 import {RootStackParamList} from '@/store/NavigationType';
 import {color} from '@/store/store';
+import {Detail} from '@/screens/Detail';
+import {More} from '@/screens/More';
 
 library.add(fas);
 
@@ -34,6 +36,36 @@ function App(): JSX.Element {
             component={Settings}
             options={{
               title: '테마 선택',
+              headerStyle: {
+                backgroundColor: color.darkGreen,
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
+              headerTitleAlign: 'center',
+            }}
+          />
+          <Stack.Screen
+            name="Detail"
+            component={Detail}
+            options={{
+              title: '설정',
+              headerStyle: {
+                backgroundColor: color.darkGreen,
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
+              headerTitleAlign: 'center',
+            }}
+          />
+          <Stack.Screen
+            name="More"
+            component={More}
+            options={{
+              title: '제작자 정보',
               headerStyle: {
                 backgroundColor: color.darkGreen,
               },

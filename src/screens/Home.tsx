@@ -115,7 +115,7 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
             </Pressable>
             <Pressable
               style={{alignItems: 'center', marginRight: 20}}
-              onPress={() => navigation.navigate('Settings')}>
+              onPress={() => navigation.navigate('Detail')}>
               <FontAwesomeIcon
                 style={{marginTop: 50, color: 'white'}}
                 size={30}
@@ -127,7 +127,7 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
             </Pressable>
             <Pressable
               style={{alignItems: 'center', marginRight: 20}}
-              onPress={() => navigation.navigate('Settings')}>
+              onPress={() => navigation.navigate('More')}>
               <FontAwesomeIcon
                 style={{marginTop: 50, color: 'white'}}
                 size={30}
