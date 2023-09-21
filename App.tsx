@@ -33,7 +33,7 @@ function App(): JSX.Element {
             name="Settings"
             component={Settings}
             options={{
-              title: '설정',
+              title: '테마 선택',
               headerStyle: {
                 backgroundColor: color.darkGreen,
               },

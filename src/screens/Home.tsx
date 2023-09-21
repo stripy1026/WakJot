@@ -100,16 +100,45 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
             onChangeText={payload => setText(payload)}
             value={text}
           />
+          <View>
+            <Pressable
+              style={{alignItems: 'center', marginRight: 20}}
+              onPress={() => navigation.navigate('Settings')}>
+              <FontAwesomeIcon
+                style={{marginTop: 50, color: 'white'}}
+                size={30}
+                icon="palette"
+              />
+              <Text style={{color: 'white', marginTop: 5, fontSize: 13}}>
+                theme
+              </Text>
+            </Pressable>
+            <Pressable
+              style={{alignItems: 'center', marginRight: 20}}
+              onPress={() => navigation.navigate('Settings')}>
+              <FontAwesomeIcon
+                style={{marginTop: 50, color: 'white'}}
+                size={30}
+                icon="gear"
+              />
+              <Text style={{color: 'white', marginTop: 5, fontSize: 12}}>
+                setting
+              </Text>
+            </Pressable>
+            <Pressable
+              style={{alignItems: 'center', marginRight: 20}}
+              onPress={() => navigation.navigate('Settings')}>
+              <FontAwesomeIcon
+                style={{marginTop: 50, color: 'white'}}
+                size={30}
+                icon="person"
+              />
+              <Text style={{color: 'white', marginTop: 5, fontSize: 13}}>
+                more
+              </Text>
+            </Pressable>
+          </View>
         </View>
-        <Pressable
-          style={{
-            ...styles.button,
-            flex: 1,
-            backgroundColor: color.lightGrey,
-          }}
-          onPress={() => navigation.navigate('Settings')}>
-          <Text>Go Settings</Text>
-        </Pressable>
         <View style={styles.buttonContainer}>
           <Pressable
             style={{
@@ -143,6 +172,7 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     flex: 1,
+    flexDirection: 'row',
     backgroundColor: 'black',
     opacity: 0.7,
   },

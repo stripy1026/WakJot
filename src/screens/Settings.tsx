@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import {Button, View} from 'react-native';
+import {View} from 'react-native';
 
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@/store/NavigationType';
