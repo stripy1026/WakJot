@@ -126,18 +126,7 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
               />
             </View>
           </Pressable>
-          <Pressable
-            style={{
-              ...styles.button,
-              flex: 2,
-              backgroundColor: color.darkGreen,
-            }}
-            onPress={saveText}>
-            <View style={styles.buttonContent}>
-              <Text style={styles.buttonText}>JOT</Text>
-              <SvgButtonPack theme={route.params.theme} />
-            </View>
-          </Pressable>
+          <SvgButtonPack theme={route.params.theme} onPress={saveText} />
         </View>
       </ImageBackground>
     </View>
