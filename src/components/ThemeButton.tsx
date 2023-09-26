@@ -2,10 +2,12 @@
 import {RootStackParamList} from '@/store/NavigationType';
 import {settings} from '@/store/settings';
 import {STORAGE_SETTINGS_KEY} from '@/store/store';
+import {themeMap} from '@/store/themeMap';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {Button, Alert} from 'react-native';
+import {Alert, Pressable, Text} from 'react-native';
 import {useSetRecoilState} from 'recoil';
+import {ThemeSvg} from './ThemeSvg';
 
 type ThemeButtonProps = {
   navigation: NativeStackNavigationProp<
@@ -17,6 +19,8 @@ type ThemeButtonProps = {
 };
 
 export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
+  const {name} = themeMap[theme as keyof typeof themeMap];
+
   const setSettings = useSetRecoilState(settings);
 
   const editTheme = async () => {
@@ -44,5 +48,10 @@ export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
     });
   };
 
-  return <Button title={theme} onPress={editTheme} />;
+  return (
+    <Pressable onPress={editTheme}>
+      <Text>{name} 테마로 변경</Text>
+      <ThemeSvg theme={theme} />
+    </Pressable>
+  );
 };
