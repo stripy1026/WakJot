@@ -28,7 +28,10 @@ export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
         JSON.stringify(newSettings),
       );
     } catch (e) {
-      Alert.alert('저장 실패', '저장에 실패했습니다');
+      Alert.alert(
+        '저장소에 저장 실패',
+        '다음 번에 앱 실행 시 설정이 제대로 적용되지 않습니다.',
+      );
     }
     navigateToHome();
   };

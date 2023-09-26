@@ -63,32 +63,32 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
     ]);
   };
 
-  const loadText = async () => {
-    try {
-      const value = await AsyncStorage.getItem(STORAGE_KEY);
-      if (value !== null) {
-        setText(value);
-      }
-    } catch (e) {
-      Alert.alert('불러오기 실패', '다시 로드를 시도해주세요');
-    }
-  };
-
-  const loadSetting = async () => {
-    try {
-      const value = await AsyncStorage.getItem(STORAGE_SETTINGS_KEY);
-      if (value !== null) {
-        setSetting(JSON.parse(value));
-      }
-    } catch (e) {
-      Alert.alert('설정 불러오기 실패', '다시 로드를 시도해주세요');
-    }
-  };
-
   useEffect(() => {
+    const loadText = async () => {
+      try {
+        const value = await AsyncStorage.getItem(STORAGE_KEY);
+        if (value !== null) {
+          setText(value);
+        }
+      } catch (e) {
+        Alert.alert('불러오기 실패', '다시 로드를 시도해주세요');
+      }
+    };
+
+    const loadSetting = async () => {
+      try {
+        const value = await AsyncStorage.getItem(STORAGE_SETTINGS_KEY);
+        if (value !== null) {
+          setSetting(JSON.parse(value));
+        }
+      } catch (e) {
+        Alert.alert('설정 불러오기 실패', '다시 로드를 시도해주세요');
+      }
+    };
+
     loadText();
     loadSetting();
-  }, []);
+  }, [setSetting]);
 
   useEffect(() => {
     requestWidgetUpdate({
