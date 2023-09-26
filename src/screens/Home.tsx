@@ -13,7 +13,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNExitApp from 'react-native-exit-app';
 import {requestWidgetUpdate} from 'react-native-android-widget';
 import {HelloWidget} from '@/widgets/HelloWidget';
-import {STORAGE_KEY, color} from '@/store/store';
+import {STORAGE_KEY, STORAGE_SETTINGS_KEY, color} from '@/store/store';
 
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 

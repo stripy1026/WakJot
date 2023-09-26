@@ -1,4 +1,5 @@
 export const STORAGE_KEY = '@jot';
+export const STORAGE_SETTINGS_KEY = '@settings';
 
 export const color = {
   darkGreen: '#0b664a',
