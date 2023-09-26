@@ -4,35 +4,37 @@ import {View} from 'react-native';
 import ThumbWakDo from '@/assets/thumb_wakdo.svg';
 import TmpSvg from '@/assets/tmp.svg';
 
-import {color} from '@/store/store';
+import {themeMap} from '@/store/themeMap';
 
 type ThemeSvgProps = {
   theme: string;
 };
 
 export const ThemeSvg = ({theme}: ThemeSvgProps) => {
+  const WIDTH = 40;
+  const HEIGHT = 40;
+  const FILL = themeMap[theme as keyof typeof themeMap].color;
+
   return (
     <View>
       {theme === 'Wakgood' && (
-        <ThumbWakDo width={40} height={40} fill={color.darkGreen} />
+        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
-      {theme === 'Ine' && (
-        <TmpSvg width={40} height={40} fill={color.IneViolet} />
-      )}
+      {theme === 'Ine' && <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />}
       {theme === 'Jingburger' && (
-        <ThumbWakDo width={40} height={40} fill={color.JingYellow} />
+        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Lilpa' && (
-        <TmpSvg width={40} height={40} fill={color.LilNavy} />
+        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Jururu' && (
-        <ThumbWakDo width={40} height={40} fill={color.RuruPink} />
+        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Gosegu' && (
-        <TmpSvg width={40} height={40} fill={color.SeguBlue} />
+        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'VIichan' && (
-        <ThumbWakDo width={40} height={40} fill={color.ChanGreen} />
+        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
     </View>
   );
