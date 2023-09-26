@@ -27,9 +27,10 @@ type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
 export default function HomeScreen({route, navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
+  const [theme, setTheme] = useState('Wakgood');
 
   const {backgroundImage}: ThemeProps =
-    themeMap[route.params.theme as keyof typeof themeMap];
+    themeMap[theme as keyof typeof themeMap];
 
   const saveText = async () => {
     try {
@@ -71,9 +72,25 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
     }
   };
 
+  const loadTheme = async () => {
+    try {
+      const value = await AsyncStorage.getItem(STORAGE_SETTINGS_KEY);
+      if (value !== null) {
+        setTheme(value);
+      }
+    } catch (e) {
+      Alert.alert('불러오기 실패', '다시 로드를 시도해주세요');
+    }
+  };
+
   useEffect(() => {
     loadText();
+    loadTheme();
   }, []);
+
+  useEffect(() => {
+    setTheme(route.params.theme);
+  }, [route.params.theme]);
 
   useEffect(() => {
     requestWidgetUpdate({
@@ -155,7 +172,7 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
               />
             </View>
           </Pressable>
-          <JotButtonPack theme={route.params.theme} onPress={saveText} />
+          <JotButtonPack theme={theme} onPress={saveText} />
         </View>
       </ImageBackground>
     </View>
