@@ -14,6 +14,7 @@ import {RootStackParamList} from '@/store/NavigationType';
 import {color} from '@/store/store';
 import {Detail} from '@/screens/Detail';
 import {More} from '@/screens/More';
+import {RecoilRoot} from 'recoil';
 
 library.add(fas);
 
@@ -21,64 +22,66 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App(): JSX.Element {
   return (
-    <View style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} translucent={true} />
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="HomeScreen">
-          <Stack.Screen
-            name="HomeScreen"
-            component={HomeScreen}
-            initialParams={{theme: 'Wakgood'}}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="Settings"
-            component={Settings}
-            options={{
-              title: '테마 선택',
-              headerStyle: {
-                backgroundColor: color.darkGreen,
-              },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-                fontWeight: 'bold',
-              },
-              headerTitleAlign: 'center',
-            }}
-          />
-          <Stack.Screen
-            name="Detail"
-            component={Detail}
-            options={{
-              title: '설정',
-              headerStyle: {
-                backgroundColor: color.darkGreen,
-              },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-                fontWeight: 'bold',
-              },
-              headerTitleAlign: 'center',
-            }}
-          />
-          <Stack.Screen
-            name="More"
-            component={More}
-            options={{
-              title: '제작자',
-              headerStyle: {
-                backgroundColor: color.darkGreen,
-              },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-                fontWeight: 'bold',
-              },
-              headerTitleAlign: 'center',
-            }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </View>
+    <RecoilRoot>
+      <View style={styles.container}>
+        <StatusBar backgroundColor={'transparent'} translucent={true} />
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="HomeScreen">
+            <Stack.Screen
+              name="HomeScreen"
+              component={HomeScreen}
+              initialParams={{theme: 'Wakgood'}}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Settings"
+              component={Settings}
+              options={{
+                title: '테마 선택',
+                headerStyle: {
+                  backgroundColor: color.darkGreen,
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                  fontWeight: 'bold',
+                },
+                headerTitleAlign: 'center',
+              }}
+            />
+            <Stack.Screen
+              name="Detail"
+              component={Detail}
+              options={{
+                title: '설정',
+                headerStyle: {
+                  backgroundColor: color.darkGreen,
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                  fontWeight: 'bold',
+                },
+                headerTitleAlign: 'center',
+              }}
+            />
+            <Stack.Screen
+              name="More"
+              component={More}
+              options={{
+                title: '제작자',
+                headerStyle: {
+                  backgroundColor: color.darkGreen,
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                  fontWeight: 'bold',
+                },
+                headerTitleAlign: 'center',
+              }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </View>
+    </RecoilRoot>
   );
 }
 

@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {themeMap} from '@/store/themeMap';
-import {ThemeSvg} from '@/components/themeSvg';
+import {ThemeSvg} from '@/components/ThemeSvg';
 
 type ButtonPackProps = {
   theme: string;
