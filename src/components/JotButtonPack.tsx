@@ -7,24 +7,12 @@ import {
   View,
 } from 'react-native';
 
-import {color} from '@/store/store';
-
-import ThumbWakDo from '@/assets/thumb_wakdo.svg';
-import TmpSvg from '@/assets/tmp.svg';
+import {themeMap} from '@/store/themeMap';
+import {ThemeSvg} from '@/components/themeSvg';
 
 type ButtonPackProps = {
   theme: string;
   onPress: ((event: GestureResponderEvent) => void) | null | undefined;
-};
-
-const themeColorMap = {
-  Wakgood: color.darkGreen,
-  Ine: color.IneViolet,
-  Jingburger: color.JingYellow,
-  Lilpa: color.LilNavy,
-  Jururu: color.RuruPink,
-  Gosegu: color.SeguBlue,
-  VIichan: color.ChanGreen,
 };
 
 export const JotButtonPack = ({theme, onPress: saveText}: ButtonPackProps) => {
@@ -33,32 +21,12 @@ export const JotButtonPack = ({theme, onPress: saveText}: ButtonPackProps) => {
       style={{
         ...styles.button,
         flex: 2,
-        backgroundColor: themeColorMap[theme as keyof typeof themeColorMap],
+        backgroundColor: themeMap[theme as keyof typeof themeMap].color,
       }}
       onPress={saveText}>
       <View style={styles.buttonContent}>
         <Text style={styles.buttonText}>JOT</Text>
-        {theme === 'Wakgood' && (
-          <ThumbWakDo width={40} height={40} fill={color.darkGreen} />
-        )}
-        {theme === 'Ine' && (
-          <TmpSvg width={40} height={40} fill={color.IneViolet} />
-        )}
-        {theme === 'Jingburger' && (
-          <ThumbWakDo width={40} height={40} fill={color.JingYellow} />
-        )}
-        {theme === 'Lilpa' && (
-          <TmpSvg width={40} height={40} fill={color.LilNavy} />
-        )}
-        {theme === 'Jururu' && (
-          <ThumbWakDo width={40} height={40} fill={color.RuruPink} />
-        )}
-        {theme === 'Gosegu' && (
-          <TmpSvg width={40} height={40} fill={color.SeguBlue} />
-        )}
-        {theme === 'VIichan' && (
-          <ThumbWakDo width={40} height={40} fill={color.ChanGreen} />
-        )}
+        <ThemeSvg theme={theme} />
       </View>
     </Pressable>
   );
