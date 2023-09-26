@@ -22,15 +22,17 @@ import {RootStackParamList} from '@/store/NavigationType';
 
 import {ThemeProps, themeMap} from '@/store/themeMap';
 import {JotButtonPack} from '@/components/JotButtonPack';
+import {settings} from '@/store/settings';
+import {useRecoilState} from 'recoil';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
-export default function HomeScreen({route, navigation}: Props): JSX.Element {
+export default function HomeScreen({navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
-  const [theme, setTheme] = useState('Wakgood');
+  const [setting, setSetting] = useRecoilState(settings);
 
   const {backgroundImage}: ThemeProps =
-    themeMap[theme as keyof typeof themeMap];
+    themeMap[setting.theme as keyof typeof themeMap];
 
   const saveText = async () => {
     try {
@@ -72,25 +74,21 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
     }
   };
 
-  const loadTheme = async () => {
+  const loadSetting = async () => {
     try {
       const value = await AsyncStorage.getItem(STORAGE_SETTINGS_KEY);
       if (value !== null) {
-        setTheme(value);
+        setSetting(JSON.parse(value));
       }
     } catch (e) {
-      Alert.alert('불러오기 실패', '다시 로드를 시도해주세요');
+      Alert.alert('설정 불러오기 실패', '다시 로드를 시도해주세요');
     }
   };
 
   useEffect(() => {
     loadText();
-    loadTheme();
+    loadSetting();
   }, []);
-
-  useEffect(() => {
-    setTheme(route.params.theme);
-  }, [route.params.theme]);
 
   useEffect(() => {
     requestWidgetUpdate({
@@ -172,7 +170,7 @@ export default function HomeScreen({route, navigation}: Props): JSX.Element {
               />
             </View>
           </Pressable>
-          <JotButtonPack theme={theme} onPress={saveText} />
+          <JotButtonPack theme={setting.theme} onPress={saveText} />
         </View>
       </ImageBackground>
     </View>
