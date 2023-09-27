@@ -1,12 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {RootStackParamList} from '@/store/NavigationType';
-import {settings} from '@/store/settings';
+import {SettingsProps, settings} from '@/store/settings';
 import {STORAGE_SETTINGS_KEY} from '@/store/store';
 import {themeMap} from '@/store/themeMap';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {Alert, Pressable, Text, View} from 'react-native';
-import {useSetRecoilState} from 'recoil';
+import {useRecoilState} from 'recoil';
 import {ThemeSvg} from './ThemeSvg';
 
 type ThemeButtonProps = {
@@ -21,11 +21,11 @@ type ThemeButtonProps = {
 export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
   const {name, color} = themeMap[theme as keyof typeof themeMap];
 
-  const setSettings = useSetRecoilState(settings);
+  const [setting, setSetting] = useRecoilState(settings);
 
   const editTheme = async () => {
-    const newSettings = {...settings, theme};
-    setSettings(newSettings);
+    const newSettings = {...setting, theme};
+    setSetting(newSettings);
     try {
       await AsyncStorage.setItem(
         STORAGE_SETTINGS_KEY,
