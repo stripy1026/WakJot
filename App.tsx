@@ -15,6 +15,7 @@ import {color} from '@/store/store';
 import {Detail} from '@/screens/Detail';
 import {More} from '@/screens/More';
 import {RecoilRoot} from 'recoil';
+import {HelloWidgetPreviewScreen} from '@/screens/HelloWidgetPreviewScreen';
 
 library.add(fas);
 
@@ -81,6 +82,7 @@ function App(): JSX.Element {
           </Stack.Navigator>
         </NavigationContainer>
       </View>
+      <HelloWidgetPreviewScreen />
     </RecoilRoot>
   );
 }

@@ -93,12 +93,12 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   useEffect(() => {
     requestWidgetUpdate({
       widgetName: 'Hello',
-      renderWidget: () => <HelloWidget text={text} />,
+      renderWidget: () => <HelloWidget text={text} setting={setting} />,
       widgetNotFound: () => {
         return;
       },
     });
-  }, [text]);
+  }, [text, setting]);
 
   return (
     <View style={styles.container}>

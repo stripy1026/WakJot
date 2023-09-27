@@ -3,12 +3,15 @@ import {StyleSheet, View} from 'react-native';
 import {WidgetPreview} from 'react-native-android-widget';
 
 import {HelloWidget} from '@/widgets/HelloWidget';
+import {useRecoilValue} from 'recoil';
+import {settings} from '@/store/settings';
 
 export function HelloWidgetPreviewScreen() {
+  const setting = useRecoilValue(settings);
   return (
     <View style={styles.container}>
       <WidgetPreview
-        renderWidget={() => <HelloWidget text="Hello" />}
+        renderWidget={() => <HelloWidget text="Hello" setting={setting} />}
         width={320}
         height={200}
       />

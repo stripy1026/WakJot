@@ -1,11 +1,13 @@
+import {SettingsProps} from '@/store/settings';
 import React from 'react';
 import {FlexWidget, TextWidget} from 'react-native-android-widget';
 
 type HelloWidgetProps = {
   text: string;
+  setting: SettingsProps;
 };
 
-export function HelloWidget({text}: HelloWidgetProps) {
+export function HelloWidget({text, setting}: HelloWidgetProps) {
   return (
     <FlexWidget
       style={{
@@ -13,6 +15,7 @@ export function HelloWidget({text}: HelloWidgetProps) {
         width: 'match_parent',
         backgroundColor: `rgba(${0}, ${0}, ${0}, ${0.6})`,
         borderRadius: 16,
+        alignItems: setting.widgetAlignText,
       }}
       clickAction="OPEN_APP">
       <TextWidget

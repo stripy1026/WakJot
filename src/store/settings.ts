@@ -1,6 +1,16 @@
 import {atom} from 'recoil';
 
-export const settings = atom({
+export type SettingsProps = {
+  theme: string;
+  widgetAlignText: 'flex-start' | 'flex-end' | 'center';
+};
+
+export const DEFAULT_SETTINGS: SettingsProps = {
+  theme: 'Wakgood',
+  widgetAlignText: 'flex-start',
+};
+
+export const settings = atom<SettingsProps>({
   key: 'settings',
-  default: {theme: 'Wakgood'},
+  default: DEFAULT_SETTINGS,
 });
