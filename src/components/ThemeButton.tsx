@@ -5,7 +5,7 @@ import {STORAGE_SETTINGS_KEY} from '@/store/store';
 import {themeMap} from '@/store/themeMap';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {Alert, Pressable, Text} from 'react-native';
+import {Alert, Pressable, Text, View} from 'react-native';
 import {useSetRecoilState} from 'recoil';
 import {ThemeSvg} from './ThemeSvg';
 
@@ -19,7 +19,7 @@ type ThemeButtonProps = {
 };
 
 export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
-  const {name} = themeMap[theme as keyof typeof themeMap];
+  const {name, color} = themeMap[theme as keyof typeof themeMap];
 
   const setSettings = useSetRecoilState(settings);
 
@@ -49,9 +49,36 @@ export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
   };
 
   return (
-    <Pressable onPress={editTheme}>
-      <Text>{name} 테마로 변경</Text>
-      <ThemeSvg theme={theme} />
+    <Pressable
+      onPress={editTheme}
+      style={{
+        flexDirection: 'row',
+        marginTop: 5,
+        marginHorizontal: 5,
+        backgroundColor: 'white',
+        borderRadius: 10,
+      }}>
+      <View
+        style={{
+          width: 50,
+          height: 50,
+          marginLeft: 20,
+          margin: 10,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: color,
+          borderRadius: 20,
+        }}>
+        <ThemeSvg theme={theme} width={40} height={40} />
+      </View>
+      <View
+        style={{
+          flex: 3,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Text style={{fontSize: 20}}>{name} 테마</Text>
+      </View>
     </Pressable>
   );
 };

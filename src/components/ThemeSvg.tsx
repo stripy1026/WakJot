@@ -8,11 +8,13 @@ import {themeMap} from '@/store/themeMap';
 
 type ThemeSvgProps = {
   theme: string;
+  width?: number;
+  height?: number;
 };
 
-export const ThemeSvg = ({theme}: ThemeSvgProps) => {
-  const WIDTH = 40;
-  const HEIGHT = 40;
+export const ThemeSvg = ({theme, width, height}: ThemeSvgProps) => {
+  const WIDTH = width ?? 40;
+  const HEIGHT = height ?? 40;
   const FILL = themeMap[theme as keyof typeof themeMap].color;
 
   return (
