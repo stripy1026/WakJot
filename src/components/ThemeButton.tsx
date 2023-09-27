@@ -54,9 +54,7 @@ export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
       style={{
         flexDirection: 'row',
         marginTop: 5,
-        marginHorizontal: 5,
         backgroundColor: 'white',
-        borderRadius: 10,
       }}>
       <View
         style={{
