@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {RootStackParamList} from '@/store/NavigationType';
-import {SettingsProps, settings} from '@/store/settings';
+import {settings} from '@/store/settings';
 import {STORAGE_SETTINGS_KEY} from '@/store/store';
 import {themeMap} from '@/store/themeMap';
 import AsyncStorage from '@react-native-async-storage/async-storage';
