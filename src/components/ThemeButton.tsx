@@ -75,7 +75,7 @@ export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <Text style={{fontSize: 20}}>{name} 테마</Text>
+        <Text style={{fontSize: 20, fontWeight: 'bold'}}>{name} 테마</Text>
       </View>
     </Pressable>
   );
