@@ -19,7 +19,7 @@ export async function widgetTaskHandler(props: WidgetTaskHandlerProps) {
   const data = (await AsyncStorage.getItem(STORAGE_KEY)) ?? '';
   const setting =
     (await AsyncStorage.getItem(STORAGE_SETTINGS_KEY)) ??
-    DEFAULT_SETTINGS.widgetAlignText;
+    JSON.stringify(DEFAULT_SETTINGS);
   const parsedSetting = JSON.parse(setting);
 
   switch (props.widgetAction) {

@@ -4,6 +4,7 @@ import {STORAGE_SETTINGS_KEY} from '@/store/store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Text, View, Pressable, Alert} from 'react-native';
 import {useRecoilState} from 'recoil';
+import {HelloWidgetPreviewScreen} from './HelloWidgetPreviewScreen';
 
 export const Detail = () => {
   const [setting, setSetting] = useRecoilState(settings);
@@ -26,19 +27,26 @@ export const Detail = () => {
 
   return (
     <View>
-      <Text>Detail</Text>
-      <Pressable
-        onPress={() => alignText({...setting, widgetAlignText: 'flex-start'})}>
-        <Text>align text left</Text>
-      </Pressable>
-      <Pressable
-        onPress={() => alignText({...setting, widgetAlignText: 'center'})}>
-        <Text>align text center</Text>
-      </Pressable>
-      <Pressable
-        onPress={() => alignText({...setting, widgetAlignText: 'flex-end'})}>
-        <Text>align text right</Text>
-      </Pressable>
+      <View style={{}}>
+        <Text>Detail</Text>
+        <Pressable
+          onPress={() =>
+            alignText({...setting, widgetAlignText: 'flex-start'})
+          }>
+          <Text>align text left</Text>
+        </Pressable>
+        <Pressable
+          onPress={() => alignText({...setting, widgetAlignText: 'center'})}>
+          <Text>align text center</Text>
+        </Pressable>
+        <Pressable
+          onPress={() => alignText({...setting, widgetAlignText: 'flex-end'})}>
+          <Text>align text right</Text>
+        </Pressable>
+      </View>
+      <View style={{alignSelf: 'flex-end'}}>
+        <HelloWidgetPreviewScreen />
+      </View>
     </View>
   );
 };
