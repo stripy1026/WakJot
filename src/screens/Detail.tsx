@@ -1,8 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {SettingsProps, settings} from '@/store/settings';
-import {STORAGE_SETTINGS_KEY} from '@/store/store';
+import {STORAGE_SETTINGS_KEY, color} from '@/store/store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Text, View, Pressable, Alert} from 'react-native';
+import {StyleSheet, Text, View, Pressable, Alert} from 'react-native';
 import {useRecoilState} from 'recoil';
 import {HelloWidgetPreviewScreen} from './HelloWidgetPreviewScreen';
 
@@ -26,9 +26,11 @@ export const Detail = () => {
   };
 
   return (
-    <View>
+    <View style={{backgroundColor: color.lightGrey}}>
       <View style={{}}>
-        <Text>Detail</Text>
+        <View style={styles.section}>
+          <Text style={styles.sectionText}>위젯 설정</Text>
+        </View>
         <Pressable
           onPress={() =>
             alignText({...setting, widgetAlignText: 'flex-start'})
@@ -50,3 +52,8 @@ export const Detail = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  section: {margin: 10, marginTop: 20},
+  sectionText: {fontWeight: 'bold', fontSize: 16},
+});
