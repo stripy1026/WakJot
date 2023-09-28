@@ -26,9 +26,21 @@ export const Detail = () => {
     }
   };
 
-  const handleWidgetOpacity = (val: number) => {
+  const handleWidgetOpacity = async (val: number) => {
     const fixedValue = Number(val.toFixed(1));
-    console.log(fixedValue);
+    const newSetting = {...setting, widgetOpacity: fixedValue};
+    setSetting(newSetting);
+    try {
+      await AsyncStorage.setItem(
+        STORAGE_SETTINGS_KEY,
+        JSON.stringify(newSetting),
+      );
+    } catch (e) {
+      Alert.alert(
+        '저장소에 저장 실패',
+        '다음 번에 앱 실행 시 설정이 제대로 적용되지 않습니다.',
+      );
+    }
   };
 
   return (
@@ -45,6 +57,13 @@ export const Detail = () => {
           step={1}
           minimumValue={0}
           maximumValue={2}
+          value={
+            setting.widgetAlignText === 'flex-start'
+              ? 0
+              : setting.widgetAlignText === 'center'
+              ? 1
+              : 2
+          }
           minimumTrackTintColor={color.darkGreen}
           maximumTrackTintColor="#000000"
           onSlidingComplete={e => {
@@ -65,6 +84,7 @@ export const Detail = () => {
           step={0.1}
           minimumValue={0}
           maximumValue={1}
+          value={setting.widgetOpacity}
           minimumTrackTintColor={color.darkGreen}
           maximumTrackTintColor="#000000"
           onSlidingComplete={val => handleWidgetOpacity(val)}
