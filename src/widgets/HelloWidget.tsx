@@ -21,7 +21,7 @@ export function HelloWidget({text, setting}: HelloWidgetProps) {
       <TextWidget
         text={text}
         style={{
-          fontSize: 16,
+          fontSize: setting.widgetFontSize,
           margin: 10,
           fontFamily: 'Inter',
           color: '#ffffff',

@@ -43,6 +43,22 @@ export const Detail = () => {
     }
   };
 
+  const handleWidgetFontSize = async (val: number) => {
+    const newSetting = {...setting, widgetFontSize: val};
+    setSetting(newSetting);
+    try {
+      await AsyncStorage.setItem(
+        STORAGE_SETTINGS_KEY,
+        JSON.stringify(newSetting),
+      );
+    } catch (e) {
+      Alert.alert(
+        '저장소에 저장 실패',
+        '다음 번에 앱 실행 시 설정이 제대로 적용되지 않습니다.',
+      );
+    }
+  };
+
   return (
     <View style={{backgroundColor: color.lightGrey, flex: 1}}>
       <View style={styles.section}>
@@ -95,17 +111,17 @@ export const Detail = () => {
       </View>
       <View style={styles.settingBox}>
         <Text style={styles.settingTitle}>
-          위젯 글씨 크기 설정 (기본: 16 현재: {setting.widgetOpacity})
+          위젯 글씨 크기 설정 (기본: 16 현재: {setting.widgetFontSize})
         </Text>
         <Slider
           style={styles.settingSlider}
-          step={0.1}
-          minimumValue={0}
-          maximumValue={1}
-          value={setting.widgetOpacity}
+          step={1}
+          minimumValue={1}
+          maximumValue={48}
+          value={setting.widgetFontSize}
           minimumTrackTintColor={color.darkGreen}
           maximumTrackTintColor="#000000"
-          onSlidingComplete={val => handleWidgetOpacity(val)}
+          onSlidingComplete={val => handleWidgetFontSize(val)}
         />
       </View>
     </View>
