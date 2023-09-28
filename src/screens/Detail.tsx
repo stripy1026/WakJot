@@ -2,9 +2,10 @@
 import {SettingsProps, settings} from '@/store/settings';
 import {STORAGE_SETTINGS_KEY, color} from '@/store/store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {StyleSheet, Text, View, Pressable, Alert} from 'react-native';
+import {StyleSheet, Text, View, Alert} from 'react-native';
 import {useRecoilState} from 'recoil';
 import {HelloWidgetPreviewScreen} from './HelloWidgetPreviewScreen';
+import Slider from '@react-native-community/slider';
 
 export const Detail = () => {
   const [setting, setSetting] = useRecoilState(settings);
@@ -25,26 +26,49 @@ export const Detail = () => {
     }
   };
 
+  const handleWidgetOpacity = (val: number) => {
+    const fixedValue = Number(val.toFixed(1));
+    console.log(fixedValue);
+  };
+
   return (
     <View style={{backgroundColor: color.lightGrey}}>
-      <View style={{}}>
-        <View style={styles.section}>
-          <Text style={styles.sectionText}>위젯 설정</Text>
-        </View>
-        <Pressable
-          onPress={() =>
-            alignText({...setting, widgetAlignText: 'flex-start'})
-          }>
-          <Text>align text left</Text>
-        </Pressable>
-        <Pressable
-          onPress={() => alignText({...setting, widgetAlignText: 'center'})}>
-          <Text>align text center</Text>
-        </Pressable>
-        <Pressable
-          onPress={() => alignText({...setting, widgetAlignText: 'flex-end'})}>
-          <Text>align text right</Text>
-        </Pressable>
+      <View style={styles.section}>
+        <Text style={styles.sectionText}>위젯 설정</Text>
+      </View>
+      <View style={styles.settingBox}>
+        <Text style={styles.settingTitle}>
+          텍스트 위치 정렬 (왼쪽, 중앙, 오른쪽)
+        </Text>
+        <Slider
+          style={styles.settingSlider}
+          step={1}
+          minimumValue={0}
+          maximumValue={2}
+          minimumTrackTintColor={color.darkGreen}
+          maximumTrackTintColor="#000000"
+          onSlidingComplete={e => {
+            if (e === 0) {
+              alignText({...setting, widgetAlignText: 'flex-start'});
+            } else if (e === 1) {
+              alignText({...setting, widgetAlignText: 'center'});
+            } else if (e === 2) {
+              alignText({...setting, widgetAlignText: 'flex-end'});
+            }
+          }}
+        />
+      </View>
+      <View style={styles.settingBox}>
+        <Text style={styles.settingTitle}>위젯 투명도 설정</Text>
+        <Slider
+          style={styles.settingSlider}
+          step={0.1}
+          minimumValue={0}
+          maximumValue={1}
+          minimumTrackTintColor={color.darkGreen}
+          maximumTrackTintColor="#000000"
+          onSlidingComplete={val => handleWidgetOpacity(val)}
+        />
       </View>
       <View style={{alignSelf: 'flex-end'}}>
         <HelloWidgetPreviewScreen />
@@ -56,4 +80,10 @@ export const Detail = () => {
 const styles = StyleSheet.create({
   section: {margin: 10, marginTop: 20},
   sectionText: {fontWeight: 'bold', fontSize: 16},
+  settingBox: {
+    marginTop: 5,
+    backgroundColor: 'white',
+  },
+  settingTitle: {marginLeft: 10, fontWeight: 'bold', fontSize: 14},
+  settingSlider: {height: 50},
 });
