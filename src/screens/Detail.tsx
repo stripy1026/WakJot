@@ -26,6 +26,22 @@ export const Detail = () => {
     }
   };
 
+  const alignHomeText = async ({homeAlignText}: SettingsProps) => {
+    const newSetting = {...setting, homeAlignText};
+    setSetting(newSetting);
+    try {
+      await AsyncStorage.setItem(
+        STORAGE_SETTINGS_KEY,
+        JSON.stringify(newSetting),
+      );
+    } catch (e) {
+      Alert.alert(
+        '저장소에 저장 실패',
+        '다음 번에 앱 실행 시 설정이 제대로 적용되지 않습니다.',
+      );
+    }
+  };
+
   const handleWidgetOpacity = async (val: number) => {
     const fixedValue = Number(val.toFixed(1));
     const newSetting = {...setting, widgetOpacity: fixedValue};
@@ -59,12 +75,28 @@ export const Detail = () => {
     }
   };
 
+  const handleHomeFontSize = async (val: number) => {
+    const newSetting = {...setting, homeFontSize: val};
+    setSetting(newSetting);
+    try {
+      await AsyncStorage.setItem(
+        STORAGE_SETTINGS_KEY,
+        JSON.stringify(newSetting),
+      );
+    } catch (e) {
+      Alert.alert(
+        '저장소에 저장 실패',
+        '다음 번에 앱 실행 시 설정이 제대로 적용되지 않습니다.',
+      );
+    }
+  };
+
   return (
     <View style={{backgroundColor: color.lightGrey, flex: 1}}>
       <View style={styles.section}>
         <Text style={styles.sectionText}>위젯 설정</Text>
       </View>
-      <View style={{height: 100, marginTop: 10}}>
+      <View style={{height: 100, marginVertical: 10}}>
         <HelloWidgetPreviewScreen />
       </View>
       <View style={styles.settingBox}>
@@ -122,6 +154,51 @@ export const Detail = () => {
           minimumTrackTintColor={color.darkGreen}
           maximumTrackTintColor="#000000"
           onSlidingComplete={val => handleWidgetFontSize(val)}
+        />
+      </View>
+      <View style={styles.section}>
+        <Text style={styles.sectionText}>메인 화면 설정</Text>
+      </View>
+      <View style={styles.settingBox}>
+        <Text style={styles.settingTitle}>메인 화면 텍스트 위치 정렬</Text>
+        <Slider
+          style={styles.settingSlider}
+          step={1}
+          minimumValue={0}
+          maximumValue={2}
+          value={
+            setting.widgetAlignText === 'flex-start'
+              ? 0
+              : setting.widgetAlignText === 'center'
+              ? 1
+              : 2
+          }
+          minimumTrackTintColor={color.darkGreen}
+          maximumTrackTintColor="#000000"
+          onSlidingComplete={e => {
+            if (e === 0) {
+              alignHomeText({...setting, homeAlignText: 'left'});
+            } else if (e === 1) {
+              alignHomeText({...setting, homeAlignText: 'center'});
+            } else if (e === 2) {
+              alignHomeText({...setting, homeAlignText: 'right'});
+            }
+          }}
+        />
+      </View>
+      <View style={styles.settingBox}>
+        <Text style={styles.settingTitle}>
+          메인 화면 글씨 크기 설정 (기본: 20 현재: {setting.homeFontSize})
+        </Text>
+        <Slider
+          style={styles.settingSlider}
+          step={1}
+          minimumValue={1}
+          maximumValue={48}
+          value={setting.homeFontSize}
+          minimumTrackTintColor={color.darkGreen}
+          maximumTrackTintColor="#000000"
+          onSlidingComplete={val => handleHomeFontSize(val)}
         />
       </View>
     </View>

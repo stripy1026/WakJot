@@ -5,6 +5,8 @@ export type SettingsProps = {
   widgetAlignText: 'flex-start' | 'flex-end' | 'center';
   widgetOpacity: number;
   widgetFontSize: number;
+  homeAlignText: 'left' | 'center' | 'right';
+  homeFontSize: number;
 };
 
 export const DEFAULT_SETTINGS: SettingsProps = {
@@ -12,6 +14,8 @@ export const DEFAULT_SETTINGS: SettingsProps = {
   widgetAlignText: 'flex-start',
   widgetOpacity: 0.6,
   widgetFontSize: 16,
+  homeAlignText: 'left',
+  homeFontSize: 20,
 };
 
 export const settings = atom<SettingsProps>({

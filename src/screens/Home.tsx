@@ -111,7 +111,11 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
             multiline
             autoComplete="off"
             autoCorrect={false}
-            style={styles.input}
+            style={{
+              ...styles.input,
+              fontSize: setting.homeFontSize,
+              textAlign: setting.homeAlignText,
+            }}
             onChangeText={payload => setText(payload)}
             value={text}
           />
