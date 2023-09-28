@@ -49,9 +49,7 @@ export const Detail = () => {
         <Text style={styles.sectionText}>위젯 설정</Text>
       </View>
       <View style={styles.settingBox}>
-        <Text style={styles.settingTitle}>
-          텍스트 위치 정렬 (왼쪽, 중앙, 오른쪽)
-        </Text>
+        <Text style={styles.settingTitle}>위젯 텍스트 위치 정렬</Text>
         <Slider
           style={styles.settingSlider}
           step={1}
@@ -78,7 +76,9 @@ export const Detail = () => {
         />
       </View>
       <View style={styles.settingBox}>
-        <Text style={styles.settingTitle}>위젯 투명도 설정</Text>
+        <Text style={styles.settingTitle}>
+          위젯 투명도 설정 (기본: 0.6 현재: {setting.widgetOpacity})
+        </Text>
         <Slider
           style={styles.settingSlider}
           step={0.1}
@@ -104,6 +104,11 @@ const styles = StyleSheet.create({
     marginTop: 5,
     backgroundColor: 'white',
   },
-  settingTitle: {marginLeft: 10, fontWeight: 'bold', fontSize: 14},
-  settingSlider: {height: 50},
+  settingTitle: {
+    marginLeft: 10,
+    marginTop: 10,
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  settingSlider: {height: 40},
 });
