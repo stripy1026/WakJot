@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {
+  ActivityIndicator,
   Alert,
   ImageBackground,
   Pressable,
@@ -24,12 +25,14 @@ import {ThemeProps, themeMap} from '@/store/themeMap';
 import {JotButtonPack} from '@/components/JotButtonPack';
 import {settings} from '@/store/settings';
 import {useRecoilState} from 'recoil';
+import {ThemeSvg} from '@/components/ThemeSvg';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
 export default function HomeScreen({navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
   const [setting, setSetting] = useRecoilState(settings);
+  const [isLoading, setIsLoading] = useState(true);
 
   const {backgroundImage}: ThemeProps =
     themeMap[setting.theme as keyof typeof themeMap];
@@ -80,6 +83,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
         const value = await AsyncStorage.getItem(STORAGE_SETTINGS_KEY);
         if (value !== null) {
           setSetting(JSON.parse(value));
+          setIsLoading(false);
         }
       } catch (e) {
         Alert.alert('설정 불러오기 실패', '다시 로드를 시도해주세요');
@@ -99,6 +103,30 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
       },
     });
   }, [text, setting]);
+
+  if (isLoading) {
+    return (
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: color.darkGreen,
+        }}>
+        <View style={{margin: 10}}>
+          <ThemeSvg theme={'Wakgood'} width={100} height={100} />
+        </View>
+        <View style={{margin: 10}}>
+          <ActivityIndicator size="large" color={color.lightGrey} />
+        </View>
+        <View style={{margin: 10}}>
+          <Text style={{fontWeight: 'bold', color: 'white'}}>
+            왁JOT 불러오는 중 ...
+          </Text>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
