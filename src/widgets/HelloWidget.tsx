@@ -13,7 +13,7 @@ export function HelloWidget({text, setting}: HelloWidgetProps) {
       style={{
         height: 'match_parent',
         width: 'match_parent',
-        backgroundColor: `rgba(${0}, ${0}, ${0}, ${0.6})`,
+        backgroundColor: `rgba(${0}, ${0}, ${0}, ${setting.widgetOpacity})`,
         borderRadius: 16,
         alignItems: setting.widgetAlignText,
       }}
