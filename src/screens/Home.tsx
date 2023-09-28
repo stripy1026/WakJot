@@ -114,7 +114,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
           backgroundColor: color.darkGreen,
         }}>
         <View style={{margin: 10}}>
-          <ThemeSvg theme={'Wakgood'} width={100} height={100} />
+          <ThemeSvg theme={'Wakgood'} width={60} height={60} />
         </View>
         <View style={{margin: 10}}>
           <ActivityIndicator size="large" color={color.iosGrey} />
