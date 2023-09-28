@@ -117,7 +117,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
           />
           <View>
             <Pressable
-              style={{alignItems: 'center', marginRight: 20}}
+              style={styles.optionButton}
               onPress={() => navigation.navigate('Settings')}>
               <FontAwesomeIcon
                 style={{marginTop: 50, color: 'white'}}
@@ -129,7 +129,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
               </Text>
             </Pressable>
             <Pressable
-              style={{alignItems: 'center', marginRight: 20}}
+              style={styles.optionButton}
               onPress={() => navigation.navigate('Detail')}>
               <FontAwesomeIcon
                 style={{marginTop: 50, color: 'white'}}
@@ -141,7 +141,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
               </Text>
             </Pressable>
             <Pressable
-              style={{alignItems: 'center', marginRight: 20}}
+              style={styles.optionButton}
               onPress={() => navigation.navigate('More')}>
               <FontAwesomeIcon
                 style={{marginTop: 50, color: 'white'}}
@@ -213,4 +213,5 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontSize: 25,
   },
+  optionButton: {alignItems: 'center', marginRight: 20},
 });
