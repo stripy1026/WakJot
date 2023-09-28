@@ -10,7 +10,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 
 export const Settings = ({navigation}: Props): JSX.Element => {
   return (
-    <View style={{flex: 1, backgroundColor: color.lightGrey}}>
+    <View style={{flex: 1, backgroundColor: color.iosGrey}}>
       <View style={styles.section}>
         <Text style={styles.sectionText}>왁JOT</Text>
       </View>

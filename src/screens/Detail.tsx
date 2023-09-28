@@ -92,7 +92,7 @@ export const Detail = () => {
   };
 
   return (
-    <View style={{backgroundColor: color.lightGrey, flex: 1}}>
+    <View style={{backgroundColor: color.iosGrey, flex: 1}}>
       <View style={styles.section}>
         <Text style={styles.sectionText}>위젯 설정</Text>
       </View>
