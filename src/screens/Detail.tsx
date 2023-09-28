@@ -167,9 +167,9 @@ export const Detail = () => {
           minimumValue={0}
           maximumValue={2}
           value={
-            setting.widgetAlignText === 'flex-start'
+            setting.homeAlignText === 'left'
               ? 0
-              : setting.widgetAlignText === 'center'
+              : setting.homeAlignText === 'center'
               ? 1
               : 2
           }
