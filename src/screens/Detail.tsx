@@ -64,7 +64,7 @@ export const Detail = () => {
       <View style={styles.section}>
         <Text style={styles.sectionText}>위젯 설정</Text>
       </View>
-      <View style={{height: 100}}>
+      <View style={{height: 100, marginTop: 10}}>
         <HelloWidgetPreviewScreen />
       </View>
       <View style={styles.settingBox}>
