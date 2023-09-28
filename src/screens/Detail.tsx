@@ -44,9 +44,12 @@ export const Detail = () => {
   };
 
   return (
-    <View style={{backgroundColor: color.lightGrey}}>
+    <View style={{backgroundColor: color.lightGrey, flex: 1}}>
       <View style={styles.section}>
         <Text style={styles.sectionText}>위젯 설정</Text>
+      </View>
+      <View style={{height: 100}}>
+        <HelloWidgetPreviewScreen />
       </View>
       <View style={styles.settingBox}>
         <Text style={styles.settingTitle}>위젯 텍스트 위치 정렬</Text>
@@ -90,8 +93,20 @@ export const Detail = () => {
           onSlidingComplete={val => handleWidgetOpacity(val)}
         />
       </View>
-      <View style={{alignSelf: 'flex-end'}}>
-        <HelloWidgetPreviewScreen />
+      <View style={styles.settingBox}>
+        <Text style={styles.settingTitle}>
+          위젯 글씨 크기 설정 (기본: 16 현재: {setting.widgetOpacity})
+        </Text>
+        <Slider
+          style={styles.settingSlider}
+          step={0.1}
+          minimumValue={0}
+          maximumValue={1}
+          value={setting.widgetOpacity}
+          minimumTrackTintColor={color.darkGreen}
+          maximumTrackTintColor="#000000"
+          onSlidingComplete={val => handleWidgetOpacity(val)}
+        />
       </View>
     </View>
   );

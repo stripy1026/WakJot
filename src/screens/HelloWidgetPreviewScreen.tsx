@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import {WidgetPreview} from 'react-native-android-widget';
 
 import {HelloWidget} from '@/widgets/HelloWidget';
@@ -14,8 +14,8 @@ export function HelloWidgetPreviewScreen() {
         renderWidget={() => (
           <HelloWidget text="위젯 미리보기" setting={setting} />
         )}
-        width={320}
-        height={200}
+        width={Dimensions.get('window').width - 40}
+        height={100}
       />
     </View>
   );
