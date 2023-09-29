@@ -23,7 +23,7 @@ import {RootStackParamList} from '@/store/NavigationType';
 
 import {ThemeProps, themeMap} from '@/store/themeMap';
 import {JotButtonPack} from '@/components/JotButtonPack';
-import {settings} from '@/store/settings';
+import {DEFAULT_SETTINGS, settings} from '@/store/settings';
 import {useRecoilState} from 'recoil';
 import {ThemeSvg} from '@/components/ThemeSvg';
 
@@ -83,8 +83,10 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
         const value = await AsyncStorage.getItem(STORAGE_SETTINGS_KEY);
         if (value !== null) {
           setSetting(JSON.parse(value));
-          setIsLoading(false);
+        } else {
+          setSetting(DEFAULT_SETTINGS);
         }
+        setIsLoading(false);
       } catch (e) {
         Alert.alert('설정 불러오기 실패', '다시 로드를 시도해주세요');
       }

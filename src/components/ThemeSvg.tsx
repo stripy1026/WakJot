@@ -24,19 +24,19 @@ export const ThemeSvg = ({theme, width, height}: ThemeSvgProps) => {
       )}
       {theme === 'Ine' && <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />}
       {theme === 'Jingburger' && (
-        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
+        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Lilpa' && (
         <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Jururu' && (
-        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
+        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Gosegu' && (
         <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'VIichan' && (
-        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
+        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
     </View>
   );

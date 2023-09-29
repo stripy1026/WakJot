@@ -15,27 +15,27 @@ export const themeMap = {
     name: '우왁굳',
   },
   Ine: {
-    backgroundImage: require('@/assets/tmpBG.jpg'),
+    backgroundImage: require('@/assets/tmpBG2.jpg'),
     color: color.IneViolet,
     name: '아이네',
   },
   Jingburger: {
-    backgroundImage: require('@/assets/tmpBG.jpg'),
+    backgroundImage: require('@/assets/tmpBG2.jpg'),
     color: color.JingYellow,
     name: '징버거',
   },
   Lilpa: {
-    backgroundImage: require('@/assets/tmpBG.jpg'),
+    backgroundImage: require('@/assets/tmpBG2.jpg'),
     color: color.LilNavy,
     name: '릴파',
   },
   Jururu: {
-    backgroundImage: require('@/assets/tmpBG.jpg'),
+    backgroundImage: require('@/assets/tmpBG2.jpg'),
     color: color.RuruPink,
     name: '주르르',
   },
   Gosegu: {
-    backgroundImage: require('@/assets/tmpBG.jpg'),
+    backgroundImage: require('@/assets/tmpBG2.jpg'),
     color: color.SeguBlue,
     name: '고세구',
   },
