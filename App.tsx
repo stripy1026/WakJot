@@ -67,7 +67,7 @@ function App(): JSX.Element {
               name="More"
               component={More}
               options={{
-                title: '제작자',
+                title: '앱 정보',
                 headerStyle: {
                   backgroundColor: color.darkGreen,
                 },
