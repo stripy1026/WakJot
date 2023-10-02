@@ -8,7 +8,11 @@ export const color = {
   JingYellow: '#f0a957',
   LilNavy: '#303090',
   RuruPink: '#ff69b4',
-  SeguBlue: '#467ec6',
+  SeguBlue: '#97C6DF',
   ChanGreen: '#85ac20',
   iosGrey: '#999999',
 };
+
+//#467ec6 segu1
+//#97C6DF segu2
+//#7BB7D7 segu3
