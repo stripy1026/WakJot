@@ -1,13 +1,33 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {color} from '@/store/store';
-import {Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 export const More = () => {
   return (
     <View style={{flex: 1, backgroundColor: color.iosGrey}}>
-      <Text>More</Text>
-      <Text>버전 정보</Text>
-      <Text>제작자 정보</Text>
+      <View style={styles.section}>
+        <Text style={styles.sectionText}>버전 정보</Text>
+      </View>
+      <View style={styles.detailBox}>
+        <Text>버전: 1.0.0</Text>
+      </View>
+      <View style={styles.section}>
+        <Text style={styles.sectionText}>제작자 정보</Text>
+      </View>
+      <View style={styles.detailBox}>
+        <Text>개발자: stripy</Text>
+        <Text>디자이너: 다언</Text>
+      </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  section: {margin: 10, marginTop: 20},
+  sectionText: {fontWeight: 'bold', fontSize: 16},
+  detailBox: {
+    marginTop: 5,
+    padding: 10,
+    backgroundColor: 'white',
+  },
+});
