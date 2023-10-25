@@ -30,5 +30,5 @@ export const Settings = ({navigation}: Props): JSX.Element => {
 
 const styles = StyleSheet.create({
   section: {margin: 10, marginTop: 20},
-  sectionText: {fontWeight: 'bold', fontSize: 16},
+  sectionText: {fontWeight: 'bold', fontSize: 16, color: '#454545'},
 });

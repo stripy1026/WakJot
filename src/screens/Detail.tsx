@@ -207,7 +207,7 @@ export const Detail = () => {
 
 const styles = StyleSheet.create({
   section: {margin: 10, marginTop: 20},
-  sectionText: {fontWeight: 'bold', fontSize: 16},
+  sectionText: {fontWeight: 'bold', fontSize: 16, color: '#454545'},
   settingBox: {
     marginTop: 5,
     backgroundColor: 'white',
@@ -217,6 +217,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontWeight: 'bold',
     fontSize: 14,
+    color: '#777777',
   },
   settingSlider: {height: 40},
 });
