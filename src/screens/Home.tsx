@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -66,7 +66,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
     ]);
   };
 
-  useEffect(() => {
+  useMemo(() => {
     const loadText = async () => {
       try {
         const value = await AsyncStorage.getItem(STORAGE_KEY);
