@@ -12,7 +12,3 @@ export const color = {
   ChanGreen: '#85ac20',
   iosGrey: '#999999',
 };
-
-//#467ec6 segu1
-//#97C6DF segu2
-//#7BB7D7 segu3
