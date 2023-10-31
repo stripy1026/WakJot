@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "608804981054",
+    "project_id": "wakjot-6f9cf",
+    "storage_bucket": "wakjot-6f9cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608804981054:android:3c59cecc4faf2aa006046f",
+        "android_client_info": {
+          "package_name": "com.wakjot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvOTgzEYD2-G41R7bAp76LKxbvgVdviTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
