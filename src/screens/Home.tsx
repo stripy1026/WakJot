@@ -26,6 +26,7 @@ import {JotButtonPack} from '@/components/JotButtonPack';
 import {DEFAULT_SETTINGS, settings} from '@/store/settings';
 import {useRecoilState} from 'recoil';
 import {ThemeSvg} from '@/components/ThemeSvg';
+import screenTrace from '@/utils/screenTrace';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
@@ -33,6 +34,8 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
   const [setting, setSetting] = useRecoilState(settings);
   const [isLoading, setIsLoading] = useState(true);
+
+  screenTrace('HomeScreen');
 
   const {backgroundImage}: ThemeProps =
     themeMap[setting.theme as keyof typeof themeMap];

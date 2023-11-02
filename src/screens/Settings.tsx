@@ -5,10 +5,12 @@ import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@/store/NavigationType';
 import {ThemeButton} from '@/components/ThemeButton';
 import {color} from '@/store/store';
+import screenTrace from '@/utils/screenTrace';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 
 export const Settings = ({navigation}: Props): JSX.Element => {
+  screenTrace('SettingsScreen');
   return (
     <View style={{flex: 1, backgroundColor: color.iosGrey}}>
       <View style={styles.section}>
