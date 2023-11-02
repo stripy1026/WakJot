@@ -9,7 +9,7 @@ export const More = () => {
         <Text style={styles.sectionText}>버전 정보</Text>
       </View>
       <View style={styles.detailBox}>
-        <Text style={styles.detailBoxText}>버전: 1.0.0</Text>
+        <Text style={styles.detailBoxText}>버전: 2.0.0</Text>
       </View>
       <View style={styles.section}>
         <Text style={styles.sectionText}>제작자 정보</Text>
