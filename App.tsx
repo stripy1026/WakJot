@@ -36,47 +36,17 @@ function App(): JSX.Element {
             <Stack.Screen
               name="Settings"
               component={Settings}
-              options={{
-                title: '테마 선택',
-                headerStyle: {
-                  backgroundColor: color.darkGreen,
-                },
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                  fontWeight: 'bold',
-                },
-                headerTitleAlign: 'center',
-              }}
+              options={{headerShown: false}}
             />
             <Stack.Screen
               name="Detail"
               component={Detail}
-              options={{
-                title: '설정',
-                headerStyle: {
-                  backgroundColor: color.darkGreen,
-                },
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                  fontWeight: 'bold',
-                },
-                headerTitleAlign: 'center',
-              }}
+              options={{headerShown: false}}
             />
             <Stack.Screen
               name="More"
               component={More}
-              options={{
-                title: '앱 정보',
-                headerStyle: {
-                  backgroundColor: color.darkGreen,
-                },
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                  fontWeight: 'bold',
-                },
-                headerTitleAlign: 'center',
-              }}
+              options={{headerShown: false}}
             />
           </Stack.Navigator>
         </NavigationContainer>

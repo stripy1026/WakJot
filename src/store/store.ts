@@ -11,5 +11,5 @@ export const color = {
   RuruPink: '#ffdfe5',
   SeguBlue: '#d3f5ff',
   ChanGreen: '#cfffce',
-  iosGrey: '#999999',
+  iosGrey: '#f2f1f6',
 };
