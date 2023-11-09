@@ -11,7 +11,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Settings} from '@/screens/Settings';
 
 import {RootStackParamList} from '@/store/NavigationType';
-import {color} from '@/store/store';
 import {Detail} from '@/screens/Detail';
 import {More} from '@/screens/More';
 import {RecoilRoot} from 'recoil';
