@@ -76,7 +76,6 @@ export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
             fontSize: 14,
             fontWeight: '400',
             color: '#000000',
-            letterSpacing: -0.35,
           }}>
           {name} 테마
         </Text>

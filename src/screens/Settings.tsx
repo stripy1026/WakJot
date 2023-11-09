@@ -29,7 +29,6 @@ export const Settings = ({navigation}: Props): JSX.Element => {
             fontSize: 24,
             fontStyle: 'normal',
             fontWeight: '700',
-            letterSpacing: -0.6,
           }}>
           테마
         </Text>
@@ -81,7 +80,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: '#848488',
     fontStyle: 'normal',
-    letterSpacing: -0.25,
   },
   buttonBorder: {
     height: 1,
