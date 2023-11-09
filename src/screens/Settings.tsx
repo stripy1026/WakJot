@@ -36,16 +36,40 @@ export const Settings = ({navigation}: Props): JSX.Element => {
       <View>
         <Text style={styles.sectionText}>왁JOT</Text>
       </View>
-      <ThemeButton navigation={navigation} theme={'Wakgood'} />
-      <View style={{marginTop: 20}}>
+      <View
+        style={{
+          marginTop: 4,
+          paddingVertical: 8,
+          paddingHorizontal: 12,
+          borderRadius: 10,
+          backgroundColor: 'white',
+          justifyContent: 'center',
+        }}>
+        <ThemeButton navigation={navigation} theme={'Wakgood'} />
+      </View>
+      <View style={{marginTop: 20, marginBottom: 4}}>
         <Text style={styles.sectionText}>돌JOT</Text>
       </View>
-      <ThemeButton navigation={navigation} theme={'Ine'} />
-      <ThemeButton navigation={navigation} theme={'Jingburger'} />
-      <ThemeButton navigation={navigation} theme={'Lilpa'} />
-      <ThemeButton navigation={navigation} theme={'Jururu'} />
-      <ThemeButton navigation={navigation} theme={'Gosegu'} />
-      <ThemeButton navigation={navigation} theme={'VIichan'} />
+      <View
+        style={{
+          borderRadius: 10,
+          paddingVertical: 8,
+          paddingLeft: 12,
+          backgroundColor: 'white',
+          gap: 6,
+        }}>
+        <ThemeButton navigation={navigation} theme={'Ine'} />
+        <View style={styles.buttonBorder} />
+        <ThemeButton navigation={navigation} theme={'Jingburger'} />
+        <View style={styles.buttonBorder} />
+        <ThemeButton navigation={navigation} theme={'Lilpa'} />
+        <View style={styles.buttonBorder} />
+        <ThemeButton navigation={navigation} theme={'Jururu'} />
+        <View style={styles.buttonBorder} />
+        <ThemeButton navigation={navigation} theme={'Gosegu'} />
+        <View style={styles.buttonBorder} />
+        <ThemeButton navigation={navigation} theme={'VIichan'} />
+      </View>
     </View>
   );
 };
@@ -56,5 +80,10 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: '#848488',
     fontStyle: 'normal',
+  },
+  buttonBorder: {
+    height: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    marginLeft: 43,
   },
 });
