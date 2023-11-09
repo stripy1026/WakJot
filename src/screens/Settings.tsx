@@ -12,12 +12,32 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 export const Settings = ({navigation}: Props): JSX.Element => {
   screenTrace('SettingsScreen');
   return (
-    <View style={{flex: 1, backgroundColor: color.iosGrey}}>
-      <View style={styles.section}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: color.iosGrey,
+        margin: 12,
+        marginTop: 55,
+      }}>
+      <View
+        style={{
+          marginBottom: 12,
+        }}>
+        <Text
+          style={{
+            color: '#000000',
+            fontSize: 24,
+            fontStyle: 'normal',
+            fontWeight: '700',
+          }}>
+          테마
+        </Text>
+      </View>
+      <View>
         <Text style={styles.sectionText}>왁JOT</Text>
       </View>
       <ThemeButton navigation={navigation} theme={'Wakgood'} />
-      <View style={styles.section}>
+      <View style={{marginTop: 20}}>
         <Text style={styles.sectionText}>돌JOT</Text>
       </View>
       <ThemeButton navigation={navigation} theme={'Ine'} />
@@ -31,6 +51,10 @@ export const Settings = ({navigation}: Props): JSX.Element => {
 };
 
 const styles = StyleSheet.create({
-  section: {margin: 10, marginTop: 20},
-  sectionText: {fontWeight: 'bold', fontSize: 16, color: '#454545'},
+  sectionText: {
+    fontWeight: '400',
+    fontSize: 10,
+    color: '#848488',
+    fontStyle: 'normal',
+  },
 });
