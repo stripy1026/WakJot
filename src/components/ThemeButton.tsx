@@ -53,29 +53,27 @@ export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
       onPress={editTheme}
       style={{
         flexDirection: 'row',
-        marginTop: 5,
         backgroundColor: 'white',
+        gap: 5,
       }}>
       <View
         style={{
-          width: 50,
-          height: 50,
-          marginLeft: 20,
-          margin: 10,
+          width: 26,
+          height: 26,
+          marginLeft: 12,
+          margin: 8,
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: color,
-          borderRadius: 20,
+          borderRadius: 6,
         }}>
-        <ThemeSvg theme={theme} width={40} height={40} />
+        <ThemeSvg theme={theme} />
       </View>
       <View
         style={{
-          flex: 3,
           justifyContent: 'center',
-          alignItems: 'center',
         }}>
-        <Text style={{fontSize: 20, fontWeight: 'bold', color: '#777777'}}>
+        <Text style={{fontSize: 14, fontWeight: '400', color: '#000000'}}>
           {name} 테마
         </Text>
       </View>
