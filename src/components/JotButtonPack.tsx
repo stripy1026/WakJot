@@ -43,9 +43,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    marginBottom: 5,
-    fontWeight: '700',
-    fontSize: 25,
-    color: 'white',
+    fontWeight: '500',
+    fontSize: 17,
+    color: '#2D2D2D',
   },
 });

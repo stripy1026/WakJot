@@ -13,8 +13,8 @@ type ThemeSvgProps = {
 };
 
 export const ThemeSvg = ({theme, width, height}: ThemeSvgProps) => {
-  const WIDTH = width ?? 40;
-  const HEIGHT = height ?? 40;
+  const WIDTH = width ?? 26;
+  const HEIGHT = height ?? 26;
   const FILL = themeMap[theme as keyof typeof themeMap].color;
 
   return (
