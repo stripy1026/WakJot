@@ -46,5 +46,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 17,
     color: '#2D2D2D',
+    letterSpacing: -0.425,
   },
 });
