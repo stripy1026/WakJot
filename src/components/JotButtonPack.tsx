@@ -20,7 +20,7 @@ export const JotButtonPack = ({theme, onPress: saveText}: ButtonPackProps) => {
     <Pressable
       style={{
         ...styles.button,
-        flex: 2,
+        flex: 1,
         backgroundColor: themeMap[theme as keyof typeof themeMap].color,
       }}
       onPress={saveText}>
@@ -35,8 +35,13 @@ export const JotButtonPack = ({theme, onPress: saveText}: ButtonPackProps) => {
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
   },
-  buttonContent: {height: 50, flexDirection: 'row', alignItems: 'center'},
+  buttonContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   buttonText: {
     marginBottom: 5,
     fontWeight: '700',

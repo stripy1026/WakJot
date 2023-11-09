@@ -140,6 +140,35 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
         resizeMode="cover"
         style={styles.backgroundImage}>
         <View style={styles.textContainer}>
+          <View
+            style={{
+              justifyContent: 'flex-end',
+              flexDirection: 'row',
+              gap: 24,
+              marginRight: 24,
+            }}>
+            <Pressable onPress={() => navigation.navigate('More')}>
+              <FontAwesomeIcon
+                style={{marginTop: 50, color: 'white'}}
+                size={30}
+                icon="person"
+              />
+            </Pressable>
+            <Pressable onPress={() => navigation.navigate('Settings')}>
+              <FontAwesomeIcon
+                style={{marginTop: 50, color: 'white'}}
+                size={30}
+                icon="palette"
+              />
+            </Pressable>
+            <Pressable onPress={() => navigation.navigate('Detail')}>
+              <FontAwesomeIcon
+                style={{marginTop: 50, color: 'white'}}
+                size={30}
+                icon="gear"
+              />
+            </Pressable>
+          </View>
           <TextInput
             multiline
             autoComplete="off"
@@ -152,62 +181,21 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
             onChangeText={payload => setText(payload)}
             value={text}
           />
-          <View>
+          <View style={styles.buttonContainer}>
             <Pressable
-              style={styles.optionButton}
-              onPress={() => navigation.navigate('Settings')}>
-              <FontAwesomeIcon
-                style={{marginTop: 50, color: 'white'}}
-                size={30}
-                icon="palette"
-              />
-              <Text style={{color: 'white', marginTop: 5, fontSize: 13}}>
-                theme
-              </Text>
-            </Pressable>
-            <Pressable
-              style={styles.optionButton}
-              onPress={() => navigation.navigate('Detail')}>
-              <FontAwesomeIcon
-                style={{marginTop: 50, color: 'white'}}
-                size={30}
-                icon="gear"
-              />
-              <Text style={{color: 'white', marginTop: 5, fontSize: 12}}>
-                setting
-              </Text>
-            </Pressable>
-            <Pressable
-              style={styles.optionButton}
-              onPress={() => navigation.navigate('More')}>
-              <FontAwesomeIcon
-                style={{marginTop: 50, color: 'white'}}
-                size={30}
-                icon="person"
-              />
-              <Text style={{color: 'white', marginTop: 5, fontSize: 13}}>
-                more
-              </Text>
-            </Pressable>
-          </View>
-        </View>
-        <View style={styles.buttonContainer}>
-          <Pressable
-            style={{
-              ...styles.button,
-              flex: 1,
-              backgroundColor: color.lightGrey,
-            }}
-            onPress={clearText}>
-            <View style={styles.buttonContent}>
+              style={{
+                ...styles.button,
+                backgroundColor: '#FFFFFF',
+              }}
+              onPress={clearText}>
               <FontAwesomeIcon
                 style={{marginBottom: 5}}
                 size={20}
                 icon="trash"
               />
-            </View>
-          </Pressable>
-          <JotButtonPack theme={setting.theme} onPress={saveText} />
+            </Pressable>
+            <JotButtonPack theme={setting.theme} onPress={saveText} />
+          </View>
         </View>
       </ImageBackground>
     </View>
@@ -220,35 +208,36 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     flex: 1,
-    justifyContent: 'flex-end',
+    opacity: 0.7,
   },
   textContainer: {
     flex: 1,
-    flexDirection: 'row',
     backgroundColor: 'black',
-    opacity: 0.7,
   },
   input: {
     flex: 1,
     color: 'white',
     fontSize: 20,
-    margin: 10,
-    marginTop: 30,
+    marginHorizontal: 24,
+    marginBottom: 24,
     textAlignVertical: 'top',
   },
   buttonContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
-    height: 40,
+    gap: 10,
+    marginBottom: 48,
+    marginHorizontal: 24,
   },
   button: {
+    justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 10,
+    width: 44,
+    height: 44,
   },
-  buttonContent: {height: 50, flexDirection: 'row', alignItems: 'center'},
   buttonText: {
     marginBottom: 5,
     fontWeight: '700',
     fontSize: 25,
   },
-  optionButton: {alignItems: 'center', marginRight: 20},
 });
