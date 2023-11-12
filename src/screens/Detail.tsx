@@ -93,8 +93,8 @@ export const Detail = () => {
 
   return (
     <View style={{backgroundColor: color.iosGrey, flex: 1}}>
-      <View style={styles.section}>
-        <Text style={styles.sectionText}>위젯 설정</Text>
+      <View style={{}}>
+        <Text style={{}}>위젯 설정</Text>
       </View>
       <View style={{height: 100, marginVertical: 10}}>
         <HelloWidgetPreviewScreen />
@@ -156,8 +156,8 @@ export const Detail = () => {
           onSlidingComplete={val => handleWidgetFontSize(val)}
         />
       </View>
-      <View style={styles.section}>
-        <Text style={styles.sectionText}>메인 화면 설정</Text>
+      <View style={{}}>
+        <Text style={{}}>메인 화면 설정</Text>
       </View>
       <View style={styles.settingBox}>
         <Text style={styles.settingTitle}>메인 화면 텍스트 위치 정렬</Text>
@@ -206,8 +206,6 @@ export const Detail = () => {
 };
 
 const styles = StyleSheet.create({
-  section: {margin: 10, marginTop: 20},
-  sectionText: {fontWeight: 'bold', fontSize: 16, color: '#454545'},
   settingBox: {
     marginTop: 5,
     backgroundColor: 'white',
