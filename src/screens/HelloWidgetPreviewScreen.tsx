@@ -14,7 +14,7 @@ export function HelloWidgetPreviewScreen() {
         renderWidget={() => (
           <HelloWidget text="위젯 미리보기" setting={setting} />
         )}
-        width={Dimensions.get('window').width - 40}
+        width={Dimensions.get('window').width - 24}
         height={100}
       />
     </View>

@@ -93,8 +93,10 @@ export const Detail = () => {
 
   return (
     <View style={{backgroundColor: color.iosGrey, flex: 1}}>
-      <View style={{}}>
-        <Text style={{}}>위젯 설정</Text>
+      <View style={{marginTop: 55, margin: 12}}>
+        <Text style={{fontWeight: '700', fontSize: 24, color: '#000000'}}>
+          위젯 설정
+        </Text>
       </View>
       <View style={{height: 100, marginVertical: 10}}>
         <HelloWidgetPreviewScreen />
