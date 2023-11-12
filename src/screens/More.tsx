@@ -16,7 +16,8 @@ export const More = () => {
       </View>
       <View style={styles.detailBox}>
         <Text style={styles.detailBoxText}>개발자: stripy</Text>
-        <Text style={styles.detailBoxText}>디자이너: 다언</Text>
+        <Text style={styles.detailBoxText}>일러스트레이터: 라면조리기</Text>
+        <Text style={styles.detailBoxText}>UI/UX 디자이너: 시부야 린</Text>
       </View>
     </View>
   );
