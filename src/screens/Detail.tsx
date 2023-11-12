@@ -98,13 +98,12 @@ export const Detail = () => {
           위젯 설정
         </Text>
       </View>
-      <View style={{height: 100, marginVertical: 10}}>
+      <View style={{height: 100, marginVertical: 10, marginBottom: 20}}>
         <HelloWidgetPreviewScreen />
       </View>
+      <Text style={styles.settingTitle}>위젯 텍스트 위치 정렬</Text>
       <View style={styles.settingBox}>
-        <Text style={styles.settingTitle}>위젯 텍스트 위치 정렬</Text>
         <Slider
-          style={styles.settingSlider}
           step={1}
           minimumValue={0}
           maximumValue={2}
@@ -115,8 +114,6 @@ export const Detail = () => {
               ? 1
               : 2
           }
-          minimumTrackTintColor={color.darkGreen}
-          maximumTrackTintColor="#000000"
           onSlidingComplete={e => {
             if (e === 0) {
               alignText({...setting, widgetAlignText: 'flex-start'});
@@ -128,43 +125,38 @@ export const Detail = () => {
           }}
         />
       </View>
+      <Text style={styles.settingTitle}>
+        위젯 투명도 설정 (기본: 0.6 현재: {setting.widgetOpacity})
+      </Text>
       <View style={styles.settingBox}>
-        <Text style={styles.settingTitle}>
-          위젯 투명도 설정 (기본: 0.6 현재: {setting.widgetOpacity})
-        </Text>
         <Slider
-          style={styles.settingSlider}
           step={0.1}
           minimumValue={0}
           maximumValue={1}
           value={setting.widgetOpacity}
-          minimumTrackTintColor={color.darkGreen}
-          maximumTrackTintColor="#000000"
           onSlidingComplete={val => handleWidgetOpacity(val)}
         />
       </View>
+      <Text style={styles.settingTitle}>
+        위젯 글씨 크기 설정 (기본: 16 현재: {setting.widgetFontSize})
+      </Text>
       <View style={styles.settingBox}>
-        <Text style={styles.settingTitle}>
-          위젯 글씨 크기 설정 (기본: 16 현재: {setting.widgetFontSize})
-        </Text>
         <Slider
-          style={styles.settingSlider}
           step={1}
           minimumValue={1}
           maximumValue={48}
           value={setting.widgetFontSize}
-          minimumTrackTintColor={color.darkGreen}
-          maximumTrackTintColor="#000000"
           onSlidingComplete={val => handleWidgetFontSize(val)}
         />
       </View>
-      <View style={{}}>
-        <Text style={{}}>메인 화면 설정</Text>
+      <View style={{marginTop: 20, margin: 12}}>
+        <Text style={{fontWeight: '700', fontSize: 24, color: '#000000'}}>
+          메인 화면 설정
+        </Text>
       </View>
+      <Text style={styles.settingTitle}>메인 화면 텍스트 위치 정렬</Text>
       <View style={styles.settingBox}>
-        <Text style={styles.settingTitle}>메인 화면 텍스트 위치 정렬</Text>
         <Slider
-          style={styles.settingSlider}
           step={1}
           minimumValue={0}
           maximumValue={2}
@@ -175,8 +167,6 @@ export const Detail = () => {
               ? 1
               : 2
           }
-          minimumTrackTintColor={color.darkGreen}
-          maximumTrackTintColor="#000000"
           onSlidingComplete={e => {
             if (e === 0) {
               alignHomeText({...setting, homeAlignText: 'left'});
@@ -188,18 +178,15 @@ export const Detail = () => {
           }}
         />
       </View>
+      <Text style={styles.settingTitle}>
+        메인 화면 글씨 크기 설정 (기본: 20 현재: {setting.homeFontSize})
+      </Text>
       <View style={styles.settingBox}>
-        <Text style={styles.settingTitle}>
-          메인 화면 글씨 크기 설정 (기본: 20 현재: {setting.homeFontSize})
-        </Text>
         <Slider
-          style={styles.settingSlider}
           step={1}
           minimumValue={1}
           maximumValue={48}
           value={setting.homeFontSize}
-          minimumTrackTintColor={color.darkGreen}
-          maximumTrackTintColor="#000000"
           onSlidingComplete={val => handleHomeFontSize(val)}
         />
       </View>
@@ -209,15 +196,18 @@ export const Detail = () => {
 
 const styles = StyleSheet.create({
   settingBox: {
-    marginTop: 5,
-    backgroundColor: 'white',
+    height: 42,
+    marginHorizontal: 12,
+    marginTop: 4,
+    marginBottom: 8,
+    backgroundColor: '#ffffff',
+    justifyContent: 'center',
+    borderRadius: 10,
   },
   settingTitle: {
-    marginLeft: 10,
-    marginTop: 10,
-    fontWeight: 'bold',
-    fontSize: 14,
-    color: '#777777',
+    marginLeft: 24,
+    fontWeight: '400',
+    fontSize: 10,
+    color: '#848488',
   },
-  settingSlider: {height: 40},
 });
