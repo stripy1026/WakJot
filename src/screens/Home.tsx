@@ -137,7 +137,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
     <View style={styles.container}>
       <ImageBackground
         source={backgroundImage}
-        resizeMode="cover"
+        resizeMode="center"
         style={styles.backgroundImage}>
         <View style={styles.textContainer}>
           <View
