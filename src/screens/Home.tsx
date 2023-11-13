@@ -16,8 +16,6 @@ import {requestWidgetUpdate} from 'react-native-android-widget';
 import {HelloWidget} from '@/widgets/HelloWidget';
 import {STORAGE_KEY, STORAGE_SETTINGS_KEY, color} from '@/store/store';
 
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@/store/NavigationType';
 
@@ -27,6 +25,11 @@ import {DEFAULT_SETTINGS, settings} from '@/store/settings';
 import {useRecoilState} from 'recoil';
 import {ThemeSvg} from '@/components/ThemeSvg';
 import screenTrace from '@/utils/screenTrace';
+
+import MoreSvg from '@/assets/more.svg';
+import SettingSvg from '@/assets/setting.svg';
+import ThemeButtonSvg from '@/assets/theme.svg';
+import DeleteSvg from '@/assets/delete.svg';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
@@ -137,36 +140,26 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
     <View style={styles.container}>
       <ImageBackground
         source={backgroundImage}
-        resizeMode="center"
+        resizeMode="contain"
         style={styles.backgroundImage}>
         <View style={styles.textContainer}>
           <View
             style={{
               justifyContent: 'flex-end',
+              alignItems: 'center',
               flexDirection: 'row',
               gap: 24,
               marginRight: 24,
+              marginTop: 50,
             }}>
             <Pressable onPress={() => navigation.navigate('More')}>
-              <FontAwesomeIcon
-                style={{marginTop: 50, color: 'white'}}
-                size={30}
-                icon="person"
-              />
+              <MoreSvg width={26} height={26} />
             </Pressable>
             <Pressable onPress={() => navigation.navigate('Settings')}>
-              <FontAwesomeIcon
-                style={{marginTop: 50, color: 'white'}}
-                size={30}
-                icon="palette"
-              />
+              <ThemeButtonSvg width={31} height={31} />
             </Pressable>
             <Pressable onPress={() => navigation.navigate('Detail')}>
-              <FontAwesomeIcon
-                style={{marginTop: 50, color: 'white'}}
-                size={30}
-                icon="gear"
-              />
+              <SettingSvg width={26} height={26} />
             </Pressable>
           </View>
           <TextInput
@@ -185,14 +178,10 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
             <Pressable
               style={{
                 ...styles.button,
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'white',
               }}
               onPress={clearText}>
-              <FontAwesomeIcon
-                style={{marginBottom: 5}}
-                size={20}
-                icon="trash"
-              />
+              <DeleteSvg width={18} height={18} />
             </Pressable>
             <JotButtonPack theme={setting.theme} onPress={saveText} />
           </View>
@@ -208,11 +197,10 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     flex: 1,
-    opacity: 0.7,
+    backgroundColor: 'rgb(199, 193, 245)',
   },
   textContainer: {
     flex: 1,
-    backgroundColor: 'black',
   },
   input: {
     flex: 1,

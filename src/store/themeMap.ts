@@ -25,7 +25,7 @@ export const themeMap = {
     name: '징버거',
   },
   Lilpa: {
-    backgroundImage: require('@/assets/bg-lilpa2.png'),
+    backgroundImage: require('@/assets/bg-lilpa.png'),
     color: color.LilNavy,
     name: '릴파',
   },
