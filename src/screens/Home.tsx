@@ -141,7 +141,11 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
       <ImageBackground
         source={backgroundImage}
         resizeMode="contain"
-        style={styles.backgroundImage}>
+        style={{
+          flex: 1,
+          backgroundColor:
+            themeMap[setting.theme as keyof typeof themeMap].backgroundColor,
+        }}>
         <View style={styles.textContainer}>
           <View
             style={{
@@ -167,7 +171,11 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
             autoComplete="off"
             autoCorrect={false}
             style={{
-              ...styles.input,
+              flex: 1,
+              color: 'white',
+              marginHorizontal: 24,
+              marginBottom: 24,
+              textAlignVertical: 'top',
               fontSize: setting.homeFontSize,
               textAlign: setting.homeAlignText,
             }}
@@ -178,7 +186,8 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
             <Pressable
               style={{
                 ...styles.button,
-                backgroundColor: 'white',
+                backgroundColor:
+                  themeMap[setting.theme as keyof typeof themeMap].color,
               }}
               onPress={clearText}>
               <DeleteSvg width={18} height={18} />
@@ -195,20 +204,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  backgroundImage: {
-    flex: 1,
-    backgroundColor: 'rgb(199, 193, 245)',
-  },
   textContainer: {
     flex: 1,
-  },
-  input: {
-    flex: 1,
-    color: 'white',
-    fontSize: 20,
-    marginHorizontal: 24,
-    marginBottom: 24,
-    textAlignVertical: 'top',
   },
   buttonContainer: {
     flexDirection: 'row',
