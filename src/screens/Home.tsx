@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   Alert,
   ImageBackground,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -37,14 +38,15 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   const [setting, setSetting] = useRecoilState(settings);
   const [isLoading, setIsLoading] = useState(true);
 
-
   const {backgroundImage}: ThemeProps =
     themeMap[setting.theme as keyof typeof themeMap];
 
   const saveText = async () => {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, text);
-      RNExitApp.exitApp();
+      if (Platform.OS === 'android') {
+        RNExitApp.exitApp();
+      }
     } catch (e) {
       Alert.alert('저장 실패', '저장에 실패했습니다');
     }

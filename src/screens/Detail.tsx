@@ -2,7 +2,7 @@
 import {SettingsProps, settings} from '@/store/settings';
 import {STORAGE_SETTINGS_KEY, color} from '@/store/store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {StyleSheet, Text, View, Alert} from 'react-native';
+import {StyleSheet, Text, View, Alert, Platform} from 'react-native';
 import {useRecoilState} from 'recoil';
 import {HelloWidgetPreviewScreen} from './HelloWidgetPreviewScreen';
 import Slider from '@react-native-community/slider';
@@ -93,63 +93,68 @@ export const Detail = () => {
 
   return (
     <View style={{backgroundColor: color.iosGrey, flex: 1}}>
-      <View style={{marginTop: 55, margin: 12}}>
-        <Text style={{fontWeight: '700', fontSize: 24, color: '#000000'}}>
-          위젯 설정
-        </Text>
-      </View>
-      <View style={{height: 100, marginVertical: 10, marginBottom: 20}}>
-        <HelloWidgetPreviewScreen />
-      </View>
-      <Text style={styles.settingTitle}>위젯 텍스트 위치 정렬</Text>
-      <View style={styles.settingBox}>
-        <Slider
-          step={1}
-          minimumValue={0}
-          maximumValue={2}
-          value={
-            setting.widgetAlignText === 'flex-start'
-              ? 0
-              : setting.widgetAlignText === 'center'
-              ? 1
-              : 2
-          }
-          onSlidingComplete={e => {
-            if (e === 0) {
-              alignText({...setting, widgetAlignText: 'flex-start'});
-            } else if (e === 1) {
-              alignText({...setting, widgetAlignText: 'center'});
-            } else if (e === 2) {
-              alignText({...setting, widgetAlignText: 'flex-end'});
-            }
-          }}
-        />
-      </View>
-      <Text style={styles.settingTitle}>
-        위젯 투명도 설정 (기본: 0.6 현재: {setting.widgetOpacity})
-      </Text>
-      <View style={styles.settingBox}>
-        <Slider
-          step={0.1}
-          minimumValue={0}
-          maximumValue={1}
-          value={setting.widgetOpacity}
-          onSlidingComplete={val => handleWidgetOpacity(val)}
-        />
-      </View>
-      <Text style={styles.settingTitle}>
-        위젯 글씨 크기 설정 (기본: 16 현재: {setting.widgetFontSize})
-      </Text>
-      <View style={styles.settingBox}>
-        <Slider
-          step={1}
-          minimumValue={1}
-          maximumValue={48}
-          value={setting.widgetFontSize}
-          onSlidingComplete={val => handleWidgetFontSize(val)}
-        />
-      </View>
-      <View style={{marginTop: 20, margin: 12}}>
+      {Platform.OS === 'android' && (
+        <View>
+          <View style={{marginTop: 55, margin: 12}}>
+            <Text style={{fontWeight: '700', fontSize: 24, color: '#000000'}}>
+              위젯 설정
+            </Text>
+          </View>
+          <View style={{height: 100, marginVertical: 10, marginBottom: 20}}>
+            <HelloWidgetPreviewScreen />
+          </View>
+          <Text style={styles.settingTitle}>위젯 텍스트 위치 정렬</Text>
+          <View style={styles.settingBox}>
+            <Slider
+              step={1}
+              minimumValue={0}
+              maximumValue={2}
+              value={
+                setting.widgetAlignText === 'flex-start'
+                  ? 0
+                  : setting.widgetAlignText === 'center'
+                  ? 1
+                  : 2
+              }
+              onSlidingComplete={e => {
+                if (e === 0) {
+                  alignText({...setting, widgetAlignText: 'flex-start'});
+                } else if (e === 1) {
+                  alignText({...setting, widgetAlignText: 'center'});
+                } else if (e === 2) {
+                  alignText({...setting, widgetAlignText: 'flex-end'});
+                }
+              }}
+            />
+          </View>
+          <Text style={styles.settingTitle}>
+            위젯 투명도 설정 (기본: 0.6 현재: {setting.widgetOpacity})
+          </Text>
+          <View style={styles.settingBox}>
+            <Slider
+              step={0.1}
+              minimumValue={0}
+              maximumValue={1}
+              value={setting.widgetOpacity}
+              onSlidingComplete={val => handleWidgetOpacity(val)}
+            />
+          </View>
+          <Text style={styles.settingTitle}>
+            위젯 글씨 크기 설정 (기본: 16 현재: {setting.widgetFontSize})
+          </Text>
+          <View style={styles.settingBox}>
+            <Slider
+              step={1}
+              minimumValue={1}
+              maximumValue={48}
+              value={setting.widgetFontSize}
+              onSlidingComplete={val => handleWidgetFontSize(val)}
+            />
+          </View>
+        </View>
+      )}
+      <View
+        style={{marginTop: Platform.OS === 'android' ? 20 : 55, margin: 12}}>
         <Text style={{fontWeight: '700', fontSize: 24, color: '#000000'}}>
           메인 화면 설정
         </Text>
