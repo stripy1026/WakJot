@@ -3,12 +3,12 @@ export const STORAGE_SETTINGS_KEY = '@settings';
 
 export const color = {
   darkGreen: '#0b664a',
-  WakGoodGreen: '#a0ffcc',
+  WakGoodGreen: '#D7FFDB',
   lightGrey: '#a0a0a0',
   IneViolet: '#ded2ff',
   JingYellow: '#fff8ba',
-  LilNavy: '#cfd1ff',
-  RuruPink: '#ffdfe5',
+  LilNavy: '#E3E9FF',
+  RuruPink: '#FFEDF0',
   SeguBlue: '#d3f5ff',
   ChanGreen: '#cfffce',
   iosGrey: '#f2f1f6',
