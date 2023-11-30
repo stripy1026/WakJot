@@ -2,7 +2,12 @@
 import {View} from 'react-native';
 
 import ThumbWakDo from '@/assets/thumb_wakdo.svg';
-import TmpSvg from '@/assets/tmp.svg';
+import LilpaSvg from '@/assets/icon-lilpa.svg';
+import VIichanSvg from '@/assets/icon-viichan.svg';
+import JingburgerSvg from '@/assets/icon-jingburger.svg';
+import IneSvg from '@/assets/icon-ine.svg';
+import JururuSvg from '@/assets/icon-jururu.svg';
+import GoseguSvg from '@/assets/icon-gosegu.svg';
 
 import {themeMap} from '@/store/themeMap';
 
@@ -13,8 +18,8 @@ type ThemeSvgProps = {
 };
 
 export const ThemeSvg = ({theme, width, height}: ThemeSvgProps) => {
-  const WIDTH = width ?? 26;
-  const HEIGHT = height ?? 26;
+  const WIDTH = width ?? 22;
+  const HEIGHT = height ?? 22;
   const FILL = themeMap[theme as keyof typeof themeMap].color;
 
   return (
@@ -22,21 +27,21 @@ export const ThemeSvg = ({theme, width, height}: ThemeSvgProps) => {
       {theme === 'Wakgood' && (
         <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
-      {theme === 'Ine' && <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />}
+      {theme === 'Ine' && <IneSvg width={WIDTH} height={HEIGHT} fill={FILL} />}
       {theme === 'Jingburger' && (
-        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
+        <JingburgerSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Lilpa' && (
-        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
+        <LilpaSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Jururu' && (
-        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
+        <JururuSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Gosegu' && (
-        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
+        <GoseguSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'VIichan' && (
-        <TmpSvg width={WIDTH} height={HEIGHT} fill={FILL} />
+        <VIichanSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
     </View>
   );
