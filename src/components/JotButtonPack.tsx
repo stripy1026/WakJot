@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {
   GestureResponderEvent,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -43,8 +44,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    fontWeight: '500',
     fontSize: 17,
     color: '#2D2D2D',
+    fontFamily: Platform.OS === 'android' ? 'Pretendard-Medium' : 'default',
+    letterSpacing: Platform.OS === 'android' ? -0.425 : 0,
   },
 });

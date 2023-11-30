@@ -180,7 +180,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
               textAlign: setting.homeAlignText,
               fontFamily:
                 Platform.OS === 'android' ? 'Pretendard-Medium' : 'default',
-              letterSpacing: -0.5,
+              letterSpacing: Platform.OS === 'android' ? -0.5 : 0,
             }}
             onChangeText={payload => setText(payload)}
             value={text}
