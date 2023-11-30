@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import {StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@/store/NavigationType';
@@ -25,8 +25,9 @@ export const Settings = ({navigation}: Props): JSX.Element => {
           style={{
             color: '#000000',
             fontSize: 24,
-            fontStyle: 'normal',
-            fontWeight: '700',
+            fontFamily:
+              Platform.OS === 'android' ? 'Pretendard-Bold' : 'default',
+            letterSpacing: Platform.OS === 'android' ? -0.6 : 0,
           }}>
           테마
         </Text>
@@ -77,7 +78,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontSize: 10,
     color: '#848488',
-    fontStyle: 'normal',
+    fontFamily: Platform.OS === 'android' ? 'Pretendard-Regular' : 'default',
+    letterSpacing: Platform.OS === 'android' ? -0.25 : 0,
   },
   buttonBorder: {
     height: 1,

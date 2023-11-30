@@ -5,7 +5,7 @@ import {STORAGE_SETTINGS_KEY} from '@/store/store';
 import {themeMap} from '@/store/themeMap';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {Alert, Pressable, Text, View} from 'react-native';
+import {Alert, Platform, Pressable, Text, View} from 'react-native';
 import {useRecoilState} from 'recoil';
 import {ThemeSvg} from './ThemeSvg';
 
@@ -74,8 +74,10 @@ export const ThemeButton = ({navigation, theme}: ThemeButtonProps) => {
         <Text
           style={{
             fontSize: 14,
-            fontWeight: '400',
             color: '#000000',
+            fontFamily:
+              Platform.OS === 'android' ? 'Pretendard-Regular' : 'default',
+            letterSpacing: Platform.OS === 'android' ? -0.35 : 0,
           }}>
           {name} 테마
         </Text>

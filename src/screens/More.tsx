@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {color} from '@/store/store';
-import {StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 
 export const More = () => {
   return (
@@ -24,12 +24,21 @@ export const More = () => {
 };
 
 const styles = StyleSheet.create({
-  section: {margin: 10, marginTop: 20},
-  sectionText: {fontWeight: 'bold', fontSize: 16, color: '#454545'},
+  section: {margin: 10, marginTop: 55},
+  sectionText: {
+    fontSize: 24,
+    color: '#454545',
+    fontFamily: Platform.OS === 'android' ? 'Pretendard-Bold' : 'default',
+    letterSpacing: Platform.OS === 'android' ? -0.5 : 0,
+  },
   detailBox: {
     marginTop: 5,
     padding: 10,
     backgroundColor: 'white',
   },
-  detailBoxText: {color: '#777777'},
+  detailBoxText: {
+    color: '#777777',
+    fontFamily: Platform.OS === 'android' ? 'Pretendard-Regular' : 'default',
+    letterSpacing: Platform.OS === 'android' ? -0.25 : 0,
+  },
 });

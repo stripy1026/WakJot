@@ -96,7 +96,14 @@ export const Detail = () => {
       {Platform.OS === 'android' && (
         <View>
           <View style={{marginTop: 55, margin: 12}}>
-            <Text style={{fontWeight: '700', fontSize: 24, color: '#000000'}}>
+            <Text
+              style={{
+                fontSize: 24,
+                color: '#000000',
+                fontFamily:
+                  Platform.OS === 'android' ? 'Pretendard-Bold' : 'default',
+                letterSpacing: Platform.OS === 'android' ? -0.6 : 0,
+              }}>
               위젯 설정
             </Text>
           </View>
@@ -155,7 +162,14 @@ export const Detail = () => {
       )}
       <View
         style={{marginTop: Platform.OS === 'android' ? 20 : 55, margin: 12}}>
-        <Text style={{fontWeight: '700', fontSize: 24, color: '#000000'}}>
+        <Text
+          style={{
+            fontSize: 24,
+            color: '#000000',
+            fontFamily:
+              Platform.OS === 'android' ? 'Pretendard-Bold' : 'default',
+            letterSpacing: Platform.OS === 'android' ? -0.6 : 0,
+          }}>
           메인 화면 설정
         </Text>
       </View>
@@ -211,8 +225,9 @@ const styles = StyleSheet.create({
   },
   settingTitle: {
     marginLeft: 24,
-    fontWeight: '400',
     fontSize: 10,
     color: '#848488',
+    fontFamily: Platform.OS === 'android' ? 'Pretendard-Regular' : 'default',
+    letterSpacing: Platform.OS === 'android' ? -0.25 : 0,
   },
 });
