@@ -17,7 +17,7 @@ export const themeMap = {
     color: color.WakGoodGreen,
     name: '우왁굳',
     backgroundColor: '#F4FFF9',
-    buttonColor: '#00FF85',
+    buttonColor: '#6eed59',
     shadowColor: '#3EFF3A',
   },
   Ine: {
