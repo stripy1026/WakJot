@@ -38,8 +38,12 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   const [setting, setSetting] = useRecoilState(settings);
   const [isLoading, setIsLoading] = useState(true);
 
-  const {backgroundImage, backgroundColor, buttonColor}: ThemeProps =
-    themeMap[setting.theme as keyof typeof themeMap];
+  const {
+    backgroundImage,
+    backgroundColor,
+    buttonColor,
+    shadowColor,
+  }: ThemeProps = themeMap[setting.theme as keyof typeof themeMap];
 
   const saveText = async () => {
     try {
@@ -197,6 +201,18 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
                 ...styles.button,
                 backgroundColor:
                   themeMap[setting.theme as keyof typeof themeMap].color,
+                borderWidth: 1,
+                borderStyle: 'solid',
+                borderColor: 'rgba(255, 255, 255, 0.30)',
+                shadowColor: shadowColor,
+                shadowOffset: {
+                  width: 0,
+                  height: 11,
+                },
+                shadowOpacity: 0.39,
+                shadowRadius: 18.5,
+
+                elevation: 7,
               }}
               onPress={clearText}>
               <DeleteSvg width={18} height={18} fill={buttonColor} />
