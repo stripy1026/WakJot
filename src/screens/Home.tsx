@@ -164,13 +164,13 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
               marginTop: 50,
             }}>
             <Pressable onPress={() => navigation.navigate('More')}>
-              <MoreSvg width={26} height={26} />
+              <MoreSvg width={26} height={26} fill={'red'} />
             </Pressable>
             <Pressable onPress={() => navigation.navigate('Settings')}>
-              <ThemeButtonSvg width={31} height={31} />
+              <ThemeButtonSvg width={31} height={31} fill={'red'} />
             </Pressable>
             <Pressable onPress={() => navigation.navigate('Detail')}>
-              <SettingSvg width={26} height={26} />
+              <SettingSvg width={26} height={26} fill={'red'} />
             </Pressable>
           </View>
           <TextInput
