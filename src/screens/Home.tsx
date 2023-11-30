@@ -128,7 +128,14 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
           <ActivityIndicator size="large" color={color.iosGrey} />
         </View>
         <View style={{margin: 10}}>
-          <Text style={{fontWeight: 'bold', color: 'white'}}>
+          <Text
+            style={{
+              fontWeight: 'bold',
+              color: 'white',
+              fontFamily:
+                Platform.OS === 'android' ? 'Pretendard-Bold' : 'default',
+              letterSpacing: Platform.OS === 'android' ? -0.6 : 0,
+            }}>
             왁JOT 불러오는 중 ...
           </Text>
         </View>
