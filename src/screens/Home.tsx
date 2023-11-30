@@ -172,12 +172,15 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
             autoCorrect={false}
             style={{
               flex: 1,
-              color: 'white',
+              color: 'black',
               marginHorizontal: 24,
               marginBottom: 24,
               textAlignVertical: 'top',
               fontSize: setting.homeFontSize,
               textAlign: setting.homeAlignText,
+              fontFamily:
+                Platform.OS === 'android' ? 'Pretendard-Medium' : 'default',
+              letterSpacing: -0.5,
             }}
             onChangeText={payload => setText(payload)}
             value={text}
