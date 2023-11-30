@@ -6,6 +6,8 @@ export type ThemeProps = {
   backgroundImage: ImageSourcePropType;
   color: string;
   name: string;
+  backgroundColor: string;
+  buttonColor: string;
 };
 
 export const themeMap = {
@@ -14,41 +16,48 @@ export const themeMap = {
     color: color.WakGoodGreen,
     name: '우왁굳',
     backgroundColor: '#F4FFF9',
+    buttonColor: '#1EBB66',
   },
   Ine: {
     backgroundImage: require('@/assets/tmp-tr.png'),
     color: color.IneViolet,
     name: '아이네',
     backgroundColor: '#F7F4FF',
+    buttonColor: '#947CD9',
   },
   Jingburger: {
     backgroundImage: require('@/assets/tmp-tr.png'),
     color: color.JingYellow,
     name: '징버거',
     backgroundColor: '#FFFEF2',
+    buttonColor: '#DCD068',
   },
   Lilpa: {
     backgroundImage: require('@/assets/bg-lilpa-preview.png'),
     color: color.LilNavy,
     name: '릴파',
     backgroundColor: '#F0F1FF',
+    buttonColor: '#7B7FD9',
   },
   Jururu: {
     backgroundImage: require('@/assets/tmp-tr.png'),
     color: color.RuruPink,
     name: '주르르',
     backgroundColor: '#FFF3F5',
+    buttonColor: '#D67385',
   },
   Gosegu: {
     backgroundImage: require('@/assets/bg-segu.png'),
     color: color.SeguBlue,
     name: '고세구',
     backgroundColor: '#F5FDFF',
+    buttonColor: '#3C9DE3',
   },
   VIichan: {
     backgroundImage: require('@/assets/tmp-tr.png'),
     color: color.ChanGreen,
     name: '비챤',
     backgroundColor: '#F6FFF5',
+    buttonColor: '#64C962',
   },
 };

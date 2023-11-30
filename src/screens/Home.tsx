@@ -38,7 +38,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   const [setting, setSetting] = useRecoilState(settings);
   const [isLoading, setIsLoading] = useState(true);
 
-  const {backgroundImage}: ThemeProps =
+  const {backgroundImage, backgroundColor, buttonColor}: ThemeProps =
     themeMap[setting.theme as keyof typeof themeMap];
 
   const saveText = async () => {
@@ -150,8 +150,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
         resizeMode="contain"
         style={{
           flex: 1,
-          backgroundColor:
-            themeMap[setting.theme as keyof typeof themeMap].backgroundColor,
+          backgroundColor: backgroundColor,
         }}>
         <View style={styles.textContainer}>
           <View
@@ -164,13 +163,13 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
               marginTop: 50,
             }}>
             <Pressable onPress={() => navigation.navigate('More')}>
-              <MoreSvg width={26} height={26} fill={'red'} />
+              <MoreSvg width={26} height={26} fill={buttonColor} />
             </Pressable>
             <Pressable onPress={() => navigation.navigate('Settings')}>
-              <ThemeButtonSvg width={31} height={31} fill={'red'} />
+              <ThemeButtonSvg width={31} height={31} fill={buttonColor} />
             </Pressable>
             <Pressable onPress={() => navigation.navigate('Detail')}>
-              <SettingSvg width={26} height={26} fill={'red'} />
+              <SettingSvg width={26} height={26} fill={buttonColor} />
             </Pressable>
           </View>
           <TextInput
