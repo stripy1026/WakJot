@@ -210,7 +210,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
                   height: 11,
                 },
                 shadowOpacity: 0.39,
-                shadowRadius: 18.5,
+                shadowRadius: 8,
 
                 elevation: 7,
               }}

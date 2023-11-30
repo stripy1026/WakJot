@@ -34,7 +34,7 @@ export const JotButtonPack = ({theme, onPress: saveText}: ButtonPackProps) => {
           height: 11,
         },
         shadowOpacity: 0.39,
-        shadowRadius: 18.5,
+        shadowRadius: 8,
 
         elevation: 7,
       }}
