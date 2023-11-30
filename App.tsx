@@ -23,7 +23,11 @@ function App(): JSX.Element {
   return (
     <RecoilRoot>
       <View style={styles.container}>
-        <StatusBar backgroundColor={'transparent'} translucent={true} />
+        <StatusBar
+          backgroundColor={'transparent'}
+          translucent={true}
+          barStyle={'dark-content'}
+        />
         <NavigationContainer>
           <Stack.Navigator initialRouteName="HomeScreen">
             <Stack.Screen
