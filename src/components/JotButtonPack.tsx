@@ -17,16 +17,30 @@ type ButtonPackProps = {
 };
 
 export const JotButtonPack = ({theme, onPress: saveText}: ButtonPackProps) => {
+  const {color, buttonColor, shadowColor} =
+    themeMap[theme as keyof typeof themeMap];
   return (
     <Pressable
       style={{
         ...styles.button,
         flex: 1,
-        backgroundColor: themeMap[theme as keyof typeof themeMap].color,
+        backgroundColor: color,
+        borderWidth: 1,
+        borderStyle: 'solid',
+        borderColor: 'rgba(255, 255, 255, 0.30)',
+        shadowColor: shadowColor,
+        shadowOffset: {
+          width: 0,
+          height: 11,
+        },
+        shadowOpacity: 0.39,
+        shadowRadius: 18.5,
+
+        elevation: 7,
       }}
       onPress={saveText}>
       <View style={styles.buttonContent}>
-        <Text style={styles.buttonText}>JOT</Text>
+        <Text style={{...styles.buttonText, color: buttonColor}}>JOT</Text>
         <ThemeSvg theme={theme} />
       </View>
     </Pressable>
@@ -45,7 +59,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 17,
-    color: '#2D2D2D',
     fontFamily: Platform.OS === 'android' ? 'Pretendard-Medium' : 'default',
     letterSpacing: Platform.OS === 'android' ? -0.425 : 0,
   },

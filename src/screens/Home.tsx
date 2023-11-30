@@ -199,7 +199,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
                   themeMap[setting.theme as keyof typeof themeMap].color,
               }}
               onPress={clearText}>
-              <DeleteSvg width={18} height={18} />
+              <DeleteSvg width={18} height={18} fill={buttonColor} />
             </Pressable>
             <JotButtonPack theme={setting.theme} onPress={saveText} />
           </View>
