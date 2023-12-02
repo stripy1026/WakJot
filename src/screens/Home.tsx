@@ -9,6 +9,7 @@ import {
   Text,
   TextInput,
   View,
+  NativeModules,
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -33,6 +34,8 @@ import DeleteSvg from '@/assets/delete.svg';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
+const {SharedDefaults} = NativeModules;
+
 export default function HomeScreen({navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
   const [setting, setSetting] = useRecoilState(settings);
@@ -48,7 +51,8 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   const saveText = async () => {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, text);
-      RNExitApp.exitApp();
+      SharedDefaults.set(text);
+      // RNExitApp.exitApp();
     } catch (e) {
       Alert.alert('저장 실패', '저장에 실패했습니다');
     }
