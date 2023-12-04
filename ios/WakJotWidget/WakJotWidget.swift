@@ -64,8 +64,6 @@ struct WakJotWidgetEntryView : View {
 
     var body: some View {
         VStack {
-
-          Text("Emoji:")
           Text(entry.data.text)
         }
     }
@@ -85,8 +83,8 @@ struct WakJotWidget: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("WakJot Widget")
+        .description("This is WakJot memo widget.")
     }
 }
 
