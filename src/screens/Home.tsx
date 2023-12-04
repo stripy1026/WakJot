@@ -9,7 +9,6 @@ import {
   Text,
   TextInput,
   View,
-  NativeModules,
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -31,15 +30,18 @@ import MoreSvg from '@/assets/more.svg';
 import SettingSvg from '@/assets/setting.svg';
 import ThemeButtonSvg from '@/assets/theme.svg';
 import DeleteSvg from '@/assets/delete.svg';
+import SharedDefaults from '@/store/SharedDefaults';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
-
-const {SharedDefaults} = NativeModules;
 
 export default function HomeScreen({navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
   const [setting, setSetting] = useRecoilState(settings);
   const [isLoading, setIsLoading] = useState(true);
+
+  const data = {
+    text,
+  };
 
   const {
     backgroundImage,
@@ -52,7 +54,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, text);
       if (Platform.OS === 'ios') {
-        await SharedDefaults.set(text);
+        await SharedDefaults.set(data);
       }
       RNExitApp.exitApp();
     } catch (e) {

@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SharedDefaults.h"
+#import "WakJot-Swift.h"
 
 @implementation SharedDefaults
 
@@ -24,6 +25,13 @@ RCT_EXPORT_METHOD(set:(NSString *)data
     NSUserDefaults *shared = [[NSUserDefaults alloc]initWithSuiteName:@"group.wakjot"]; //App Group명
     [shared setObject:data forKey:@"wakjotKey"]; // data를 저장할 key 값
     [shared synchronize];
+    
+    if (@available(iOS 14, *)) {
+       [WidgetKitHelper reloadAllTimelines];
+     } else {
+         // Fallback on earlier versions
+     }
+    
     resolve(@"true");
   }@catch(NSException *exception){
     reject(@"get_error",exception.reason, nil);
