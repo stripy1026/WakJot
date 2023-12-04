@@ -51,8 +51,10 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   const saveText = async () => {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, text);
-      SharedDefaults.set(text);
-      // RNExitApp.exitApp();
+      if (Platform.OS === 'ios') {
+        await SharedDefaults.set(text);
+      }
+      RNExitApp.exitApp();
     } catch (e) {
       Alert.alert('저장 실패', '저장에 실패했습니다');
     }
