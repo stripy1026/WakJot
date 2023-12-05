@@ -30,6 +30,7 @@ import MoreSvg from '@/assets/more.svg';
 import SettingSvg from '@/assets/setting.svg';
 import ThemeButtonSvg from '@/assets/theme.svg';
 import DeleteSvg from '@/assets/delete.svg';
+import SharedDefaults from '@/store/SharedDefaults';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
 
@@ -37,6 +38,10 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   const [text, setText] = useState('');
   const [setting, setSetting] = useRecoilState(settings);
   const [isLoading, setIsLoading] = useState(true);
+
+  const data = {
+    text,
+  };
 
   const {
     backgroundImage,
@@ -48,9 +53,10 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
   const saveText = async () => {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, text);
-      if (Platform.OS === 'android') {
-        RNExitApp.exitApp();
+      if (Platform.OS === 'ios') {
+        await SharedDefaults.set(data);
       }
+      RNExitApp.exitApp();
     } catch (e) {
       Alert.alert('저장 실패', '저장에 실패했습니다');
     }

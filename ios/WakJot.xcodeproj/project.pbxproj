@@ -11,9 +11,19 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2611769388F4AE6CACF8CD66 /* libPods-WakJot-WakJotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F04E048F29B7043A2D0F2A5 /* libPods-WakJot-WakJotTests.a */; };
-		5BB3260D56262CA86889474C /* libPods-WakJot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D395DCC2EA41B31920EDA65 /* libPods-WakJot.a */; };
+		1669BCE72B1BE869000DE7CD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669BCE62B1BE869000DE7CD /* WidgetKit.framework */; };
+		1669BCE92B1BE869000DE7CD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669BCE82B1BE869000DE7CD /* SwiftUI.framework */; };
+		1669BCEC2B1BE869000DE7CD /* WakJotWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1669BCEB2B1BE869000DE7CD /* WakJotWidgetBundle.swift */; };
+		1669BCEE2B1BE869000DE7CD /* WakJotWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1669BCED2B1BE869000DE7CD /* WakJotWidget.swift */; };
+		1669BCF02B1BE86B000DE7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1669BCEF2B1BE86B000DE7CD /* Assets.xcassets */; };
+		1669BCF42B1BE86B000DE7CD /* WakJotWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1669BCE52B1BE869000DE7CD /* WakJotWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1669BD0A2B1CFB1B000DE7CD /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669BD092B1CFB1A000DE7CD /* SharedDefaults.m */; };
+		1669BD0B2B1CFB1B000DE7CD /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669BD092B1CFB1A000DE7CD /* SharedDefaults.m */; };
+		1669BD162B1E4BCE000DE7CD /* WidgetKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1669BD152B1E4BCE000DE7CD /* WidgetKitHelper.swift */; };
+		1669BD172B1E4BCE000DE7CD /* WidgetKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1669BD152B1E4BCE000DE7CD /* WidgetKitHelper.swift */; };
+		620D6159801C83764F4D60FF /* libPods-WakJot-WakJotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA44BEEB4ADF67A7D89887D /* libPods-WakJot-WakJotTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		E15F0D78D2F16D9A23FDA06B /* libPods-WakJot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F797C09890BB27CD9927D387 /* libPods-WakJot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,26 +34,62 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = WakJot;
 		};
+		1669BCF22B1BE86B000DE7CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1669BCE42B1BE869000DE7CD;
+			remoteInfo = WakJotWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1669BCF82B1BE86B000DE7CD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1669BCF42B1BE86B000DE7CD /* WakJotWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* WakJotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakJotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WakJotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WakJotTests.m; sourceTree = "<group>"; };
-		05FA0101071E6E092BDACBE6 /* Pods-WakJot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot.debug.xcconfig"; path = "Target Support Files/Pods-WakJot/Pods-WakJot.debug.xcconfig"; sourceTree = "<group>"; };
-		0D395DCC2EA41B31920EDA65 /* libPods-WakJot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakJot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* WakJot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakJot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WakJot/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WakJot/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WakJot/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WakJot/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WakJot/main.m; sourceTree = "<group>"; };
-		472D9D97E26D726A94C63D04 /* Pods-WakJot-WakJotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot-WakJotTests.release.xcconfig"; path = "Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests.release.xcconfig"; sourceTree = "<group>"; };
-		5335FDA16E5EA12C54F4AE0E /* Pods-WakJot-WakJotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot-WakJotTests.debug.xcconfig"; path = "Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7F04E048F29B7043A2D0F2A5 /* libPods-WakJot-WakJotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakJot-WakJotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1669BCE52B1BE869000DE7CD /* WakJotWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WakJotWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1669BCE62B1BE869000DE7CD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1669BCE82B1BE869000DE7CD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		1669BCEB2B1BE869000DE7CD /* WakJotWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakJotWidgetBundle.swift; sourceTree = "<group>"; };
+		1669BCED2B1BE869000DE7CD /* WakJotWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakJotWidget.swift; sourceTree = "<group>"; };
+		1669BCEF2B1BE86B000DE7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1669BCF12B1BE86B000DE7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1669BCF92B1BE885000DE7CD /* WakJot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = WakJot.entitlements; path = WakJot/WakJot.entitlements; sourceTree = "<group>"; };
+		1669BCFA2B1BE88C000DE7CD /* WakJotWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WakJotWidgetExtension.entitlements; sourceTree = "<group>"; };
+		1669BCFB2B1BECF3000DE7CD /* WakJotWidgetExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WakJotWidgetExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		1669BD082B1CFB05000DE7CD /* SharedDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedDefaults.h; sourceTree = "<group>"; };
+		1669BD092B1CFB1A000DE7CD /* SharedDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedDefaults.m; sourceTree = "<group>"; };
+		1669BD102B1E496B000DE7CD /* WakJot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WakJot-Bridging-Header.h"; sourceTree = "<group>"; };
+		1669BD112B1E496B000DE7CD /* WakJotTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WakJotTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		1669BD152B1E4BCE000DE7CD /* WidgetKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKitHelper.swift; sourceTree = "<group>"; };
+		236FC07A386961CCBCB22FE7 /* Pods-WakJot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot.debug.xcconfig"; path = "Target Support Files/Pods-WakJot/Pods-WakJot.debug.xcconfig"; sourceTree = "<group>"; };
+		23F6B31329281587B86B9537 /* Pods-WakJot-WakJotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot-WakJotTests.release.xcconfig"; path = "Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests.release.xcconfig"; sourceTree = "<group>"; };
+		3595855157D6563FCEE63E5E /* Pods-WakJot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot.release.xcconfig"; path = "Target Support Files/Pods-WakJot/Pods-WakJot.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WakJot/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EA5B6C8794FC135211891137 /* Pods-WakJot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot.release.xcconfig"; path = "Target Support Files/Pods-WakJot/Pods-WakJot.release.xcconfig"; sourceTree = "<group>"; };
+		849B2AE1D568531C64ACC0D2 /* Pods-WakJot-WakJotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot-WakJotTests.debug.xcconfig"; path = "Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFA44BEEB4ADF67A7D89887D /* libPods-WakJot-WakJotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakJot-WakJotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F797C09890BB27CD9927D387 /* libPods-WakJot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakJot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2611769388F4AE6CACF8CD66 /* libPods-WakJot-WakJotTests.a in Frameworks */,
+				620D6159801C83764F4D60FF /* libPods-WakJot-WakJotTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +105,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB3260D56262CA86889474C /* libPods-WakJot.a in Frameworks */,
+				E15F0D78D2F16D9A23FDA06B /* libPods-WakJot.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1669BCE22B1BE869000DE7CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1669BCE92B1BE869000DE7CD /* SwiftUI.framework in Frameworks */,
+				1669BCE72B1BE869000DE7CD /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +141,7 @@
 		13B07FAE1A68108700A75B9A /* WakJot */ = {
 			isa = PBXGroup;
 			children = (
+				1669BCF92B1BE885000DE7CD /* WakJot.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -96,12 +152,25 @@
 			name = WakJot;
 			sourceTree = "<group>";
 		};
+		1669BCEA2B1BE869000DE7CD /* WakJotWidget */ = {
+			isa = PBXGroup;
+			children = (
+				1669BCEB2B1BE869000DE7CD /* WakJotWidgetBundle.swift */,
+				1669BCED2B1BE869000DE7CD /* WakJotWidget.swift */,
+				1669BCEF2B1BE86B000DE7CD /* Assets.xcassets */,
+				1669BCF12B1BE86B000DE7CD /* Info.plist */,
+			);
+			path = WakJotWidget;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				0D395DCC2EA41B31920EDA65 /* libPods-WakJot.a */,
-				7F04E048F29B7043A2D0F2A5 /* libPods-WakJot-WakJotTests.a */,
+				1669BCE62B1BE869000DE7CD /* WidgetKit.framework */,
+				1669BCE82B1BE869000DE7CD /* SwiftUI.framework */,
+				F797C09890BB27CD9927D387 /* libPods-WakJot.a */,
+				BFA44BEEB4ADF67A7D89887D /* libPods-WakJot-WakJotTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,12 +185,20 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				1669BD152B1E4BCE000DE7CD /* WidgetKitHelper.swift */,
+				1669BD092B1CFB1A000DE7CD /* SharedDefaults.m */,
+				1669BD082B1CFB05000DE7CD /* SharedDefaults.h */,
+				1669BCFA2B1BE88C000DE7CD /* WakJotWidgetExtension.entitlements */,
 				13B07FAE1A68108700A75B9A /* WakJot */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* WakJotTests */,
+				1669BCEA2B1BE869000DE7CD /* WakJotWidget */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				1669BCFB2B1BECF3000DE7CD /* WakJotWidgetExtension-Bridging-Header.h */,
+				1669BD102B1E496B000DE7CD /* WakJot-Bridging-Header.h */,
+				1669BD112B1E496B000DE7CD /* WakJotTests-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -133,6 +210,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* WakJot.app */,
 				00E356EE1AD99517003FC87E /* WakJotTests.xctest */,
+				1669BCE52B1BE869000DE7CD /* WakJotWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,10 +218,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				05FA0101071E6E092BDACBE6 /* Pods-WakJot.debug.xcconfig */,
-				EA5B6C8794FC135211891137 /* Pods-WakJot.release.xcconfig */,
-				5335FDA16E5EA12C54F4AE0E /* Pods-WakJot-WakJotTests.debug.xcconfig */,
-				472D9D97E26D726A94C63D04 /* Pods-WakJot-WakJotTests.release.xcconfig */,
+				236FC07A386961CCBCB22FE7 /* Pods-WakJot.debug.xcconfig */,
+				3595855157D6563FCEE63E5E /* Pods-WakJot.release.xcconfig */,
+				849B2AE1D568531C64ACC0D2 /* Pods-WakJot-WakJotTests.debug.xcconfig */,
+				23F6B31329281587B86B9537 /* Pods-WakJot-WakJotTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WakJotTests" */;
 			buildPhases = (
-				04B03845BB7FA2EB7E5DCB08 /* [CP] Check Pods Manifest.lock */,
+				89FE3679F175347F7B9E6F1A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				A5B933B23309E75AFC2658DB /* [CP] Embed Pods Frameworks */,
-				B9F162A975CA9A5BF4560D90 /* [CP] Copy Pods Resources */,
+				7316A848742E4704DF55DD2C /* [CP] Embed Pods Frameworks */,
+				7F1D56CE317D4ED4AA7EB260 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,23 +254,42 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WakJot" */;
 			buildPhases = (
-				1A13D5608BBA07D58336C7A2 /* [CP] Check Pods Manifest.lock */,
+				4F21AE57F0F58FD01539AC49 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				1DB56A80B7FB93FEF9B18BA9 /* [CP] Embed Pods Frameworks */,
-				5D03E3E18124B3819BC9B4C0 /* [CP] Copy Pods Resources */,
+				1669BCF82B1BE86B000DE7CD /* Embed Foundation Extensions */,
+				6C4D220FB719727A5B0280B4 /* [CP] Embed Pods Frameworks */,
+				8B68516F8ABDF9F8E2BF21EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1669BCF32B1BE86B000DE7CD /* PBXTargetDependency */,
 			);
 			name = WakJot;
 			productName = WakJot;
 			productReference = 13B07F961A680F5B00A75B9A /* WakJot.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1669BCE42B1BE869000DE7CD /* WakJotWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1669BCF52B1BE86B000DE7CD /* Build configuration list for PBXNativeTarget "WakJotWidgetExtension" */;
+			buildPhases = (
+				1669BCE12B1BE869000DE7CD /* Sources */,
+				1669BCE22B1BE869000DE7CD /* Frameworks */,
+				1669BCE32B1BE869000DE7CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WakJotWidgetExtension;
+			productName = WakJotWidgetExtension;
+			productReference = 1669BCE52B1BE869000DE7CD /* WakJotWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,14 +297,21 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 1500;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1500;
+					};
+					1669BCE42B1BE869000DE7CD = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -226,6 +330,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* WakJot */,
 				00E356ED1AD99517003FC87E /* WakJotTests */,
+				1669BCE42B1BE869000DE7CD /* WakJotWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +349,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1669BCE32B1BE869000DE7CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1669BCF02B1BE86B000DE7CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,29 +379,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		04B03845BB7FA2EB7E5DCB08 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WakJot-WakJotTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1A13D5608BBA07D58336C7A2 /* [CP] Check Pods Manifest.lock */ = {
+		4F21AE57F0F58FD01539AC49 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -310,7 +401,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1DB56A80B7FB93FEF9B18BA9 /* [CP] Embed Pods Frameworks */ = {
+		6C4D220FB719727A5B0280B4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,24 +418,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5D03E3E18124B3819BC9B4C0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5B933B23309E75AFC2658DB /* [CP] Embed Pods Frameworks */ = {
+		7316A848742E4704DF55DD2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,7 +435,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9F162A975CA9A5BF4560D90 /* [CP] Copy Pods Resources */ = {
+		7F1D56CE317D4ED4AA7EB260 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,6 +450,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89FE3679F175347F7B9E6F1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WakJot-WakJotTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B68516F8ABDF9F8E2BF21EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -404,7 +517,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1669BD0B2B1CFB1B000DE7CD /* SharedDefaults.m in Sources */,
 				00E356F31AD99517003FC87E /* WakJotTests.m in Sources */,
+				1669BD172B1E4BCE000DE7CD /* WidgetKitHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,8 +527,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1669BD162B1E4BCE000DE7CD /* WidgetKitHelper.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				1669BD0A2B1CFB1B000DE7CD /* SharedDefaults.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1669BCE12B1BE869000DE7CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1669BCEC2B1BE869000DE7CD /* WakJotWidgetBundle.swift in Sources */,
+				1669BCEE2B1BE869000DE7CD /* WakJotWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,14 +551,21 @@
 			target = 13B07F861A680F5B00A75B9A /* WakJot */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		1669BCF32B1BE86B000DE7CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1669BCE42B1BE869000DE7CD /* WakJotWidgetExtension */;
+			targetProxy = 1669BCF22B1BE86B000DE7CD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5335FDA16E5EA12C54F4AE0E /* Pods-WakJot-WakJotTests.debug.xcconfig */;
+			baseConfigurationReference = 849B2AE1D568531C64ACC0D2 /* Pods-WakJot-WakJotTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -451,15 +584,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WakJotTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakJot.app/WakJot";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 472D9D97E26D726A94C63D04 /* Pods-WakJot-WakJotTests.release.xcconfig */;
+			baseConfigurationReference = 23F6B31329281587B86B9537 /* Pods-WakJot-WakJotTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = WakJotTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -475,17 +613,22 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WakJotTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakJot.app/WakJot";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05FA0101071E6E092BDACBE6 /* Pods-WakJot.debug.xcconfig */;
+			baseConfigurationReference = 236FC07A386961CCBCB22FE7 /* Pods-WakJot.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WakJot/WakJot.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6P852S9R4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WakJot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -500,6 +643,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WakJot;
+				SWIFT_OBJC_BRIDGING_HEADER = "WakJot-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -508,11 +652,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA5B6C8794FC135211891137 /* Pods-WakJot.release.xcconfig */;
+			baseConfigurationReference = 3595855157D6563FCEE63E5E /* Pods-WakJot.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WakJot/WakJot.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6P852S9R4;
 				INFOPLIST_FILE = WakJot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,8 +673,100 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WakJot;
+				SWIFT_OBJC_BRIDGING_HEADER = "WakJot-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		1669BCF62B1BE86B000DE7CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = WakJotWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Q6P852S9R4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WakJotWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WakJotWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.WakJot.WakJotWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WakJotWidgetExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1669BCF72B1BE86B000DE7CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = WakJotWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Q6P852S9R4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WakJotWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WakJotWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.WakJot.WakJotWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WakJotWidgetExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -666,6 +905,7 @@
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -687,6 +927,15 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1669BCF52B1BE86B000DE7CD /* Build configuration list for PBXNativeTarget "WakJotWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1669BCF62B1BE86B000DE7CD /* Debug */,
+				1669BCF72B1BE86B000DE7CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
