@@ -21,7 +21,7 @@ export const themeMap = {
     shadowColor: '#3EFF3A',
   },
   Ine: {
-    backgroundImage: require('@/assets/tmp-tr.png'),
+    backgroundImage: require('@/assets/bg-ine.png'),
     color: color.IneViolet,
     name: '아이네',
     backgroundColor: '#F7F4FF',
@@ -29,7 +29,7 @@ export const themeMap = {
     shadowColor: '#C58BFF',
   },
   Jingburger: {
-    backgroundImage: require('@/assets/tmp-tr.png'),
+    backgroundImage: require('@/assets/bg-jingburger.png'),
     color: color.JingYellow,
     name: '징버거',
     backgroundColor: '#FFFEF2',
@@ -37,7 +37,7 @@ export const themeMap = {
     shadowColor: '#FFC530',
   },
   Lilpa: {
-    backgroundImage: require('@/assets/bg-lilpa-preview.png'),
+    backgroundImage: require('@/assets/bg-lilpa.png'),
     color: color.LilNavy,
     name: '릴파',
     backgroundColor: '#F0F1FF',
@@ -45,7 +45,7 @@ export const themeMap = {
     shadowColor: '#98AFFF',
   },
   Jururu: {
-    backgroundImage: require('@/assets/tmp-tr.png'),
+    backgroundImage: require('@/assets/bg-jururu.png'),
     color: color.RuruPink,
     name: '주르르',
     backgroundColor: '#FFF3F5',
@@ -53,7 +53,7 @@ export const themeMap = {
     shadowColor: '#FF8DA3',
   },
   Gosegu: {
-    backgroundImage: require('@/assets/bg-segu.png'),
+    backgroundImage: require('@/assets/bg-gosegu.png'),
     color: color.SeguBlue,
     name: '고세구',
     backgroundColor: '#F5FDFF',
@@ -61,7 +61,7 @@ export const themeMap = {
     shadowColor: '#68E4FF',
   },
   VIichan: {
-    backgroundImage: require('@/assets/tmp-tr.png'),
+    backgroundImage: require('@/assets/bg-viichan.png'),
     color: color.ChanGreen,
     name: '비챤',
     backgroundColor: '#F6FFF5',
