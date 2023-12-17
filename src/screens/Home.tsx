@@ -158,6 +158,9 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
       <ImageBackground
         source={backgroundImage}
         resizeMode="contain"
+        imageStyle={{
+          opacity: 0.6,
+        }}
         style={{
           flex: 1,
           backgroundColor: backgroundColor,
