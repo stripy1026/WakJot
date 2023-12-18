@@ -91,6 +91,23 @@ export const Detail = () => {
     }
   };
 
+  const handlehomeBgOpacity = async (val: number) => {
+    const fixedValue = Number(val.toFixed(1));
+    const newSetting = {...setting, homeBgOpacity: fixedValue};
+    setSetting(newSetting);
+    try {
+      await AsyncStorage.setItem(
+        STORAGE_SETTINGS_KEY,
+        JSON.stringify(newSetting),
+      );
+    } catch (e) {
+      Alert.alert(
+        '저장소에 저장 실패',
+        '다음 번에 앱 실행 시 설정이 제대로 적용되지 않습니다.',
+      );
+    }
+  };
+
   return (
     <View style={{backgroundColor: color.iosGrey, flex: 1}}>
       {Platform.OS === 'android' && (
@@ -207,6 +224,18 @@ export const Detail = () => {
           maximumValue={48}
           value={setting.homeFontSize}
           onSlidingComplete={val => handleHomeFontSize(val)}
+        />
+      </View>
+      <Text style={styles.settingTitle}>
+        배경 이미지 투명도 설정 (기본: 0.6 현재: {setting.homeBgOpacity})
+      </Text>
+      <View style={styles.settingBox}>
+        <Slider
+          step={0.1}
+          minimumValue={0}
+          maximumValue={1}
+          value={setting.homeBgOpacity}
+          onSlidingComplete={val => handlehomeBgOpacity(val)}
         />
       </View>
     </View>

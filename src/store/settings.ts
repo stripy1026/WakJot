@@ -7,6 +7,7 @@ export type SettingsProps = {
   widgetFontSize: number;
   homeAlignText: 'left' | 'center' | 'right';
   homeFontSize: number;
+  homeBgOpacity: number;
 };
 
 export const DEFAULT_SETTINGS: SettingsProps = {
@@ -16,6 +17,7 @@ export const DEFAULT_SETTINGS: SettingsProps = {
   widgetFontSize: 16,
   homeAlignText: 'left',
   homeFontSize: 20,
+  homeBgOpacity: 0.6,
 };
 
 export const settings = atom<SettingsProps>({
