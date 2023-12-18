@@ -6,7 +6,6 @@ import {
   Platform,
   Pressable,
   StyleSheet,
-  Text,
   TextInput,
   View,
 } from 'react-native';
@@ -15,7 +14,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNExitApp from 'react-native-exit-app';
 import {requestWidgetUpdate} from 'react-native-android-widget';
 import {HelloWidget} from '@/widgets/HelloWidget';
-import {STORAGE_KEY, STORAGE_SETTINGS_KEY, color} from '@/store/store';
+import {STORAGE_KEY, STORAGE_SETTINGS_KEY} from '@/store/store';
 
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@/store/NavigationType';
@@ -24,7 +23,6 @@ import {ThemeProps, themeMap} from '@/store/themeMap';
 import {JotButtonPack} from '@/components/JotButtonPack';
 import {DEFAULT_SETTINGS, settings} from '@/store/settings';
 import {useRecoilState} from 'recoil';
-import {ThemeSvg} from '@/components/ThemeSvg';
 
 import MoreSvg from '@/assets/more.svg';
 import SettingSvg from '@/assets/setting.svg';
@@ -129,25 +127,10 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: color.darkGreen,
+          backgroundColor: 'white',
         }}>
         <View style={{margin: 10}}>
-          <ThemeSvg theme={'Wakgood'} width={60} height={60} />
-        </View>
-        <View style={{margin: 10}}>
-          <ActivityIndicator size="large" color={color.iosGrey} />
-        </View>
-        <View style={{margin: 10}}>
-          <Text
-            style={{
-              fontWeight: 'bold',
-              color: 'white',
-              fontFamily:
-                Platform.OS === 'android' ? 'Pretendard-Bold' : 'default',
-              letterSpacing: Platform.OS === 'android' ? -0.6 : 0,
-            }}>
-            왁JOT 불러오는 중 ...
-          </Text>
+          <ActivityIndicator size="large" color="#aaaaaa" />
         </View>
       </View>
     );
