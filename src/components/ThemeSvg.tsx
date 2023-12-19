@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {View} from 'react-native';
 
+import WakgoodSvg from '@/assets/icon-wakgood.svg';
 import ThumbWakDo from '@/assets/thumb_wakdo.svg';
 import LilpaSvg from '@/assets/icon-lilpa.svg';
 import VIichanSvg from '@/assets/icon-viichan.svg';
@@ -25,7 +26,7 @@ export const ThemeSvg = ({theme, width, height}: ThemeSvgProps) => {
   return (
     <View>
       {theme === 'Wakgood' && (
-        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
+        <WakgoodSvg width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
       {theme === 'Wakdoo' && (
         <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
