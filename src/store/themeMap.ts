@@ -20,6 +20,14 @@ export const themeMap = {
     buttonColor: '#6eed59',
     shadowColor: '#3EFF3A',
   },
+  Wakdoo: {
+    backgroundImage: require('@/assets/bg-wakdoo.png'),
+    color: '#FFE7C9',
+    name: '왁두',
+    backgroundColor: '#D7A769',
+    buttonColor: '#927346',
+    shadowColor: '#FF8A00',
+  },
   Ine: {
     backgroundImage: require('@/assets/bg-ine.png'),
     color: color.IneViolet,

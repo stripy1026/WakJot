@@ -43,8 +43,11 @@ export const Settings = ({navigation}: Props): JSX.Element => {
           borderRadius: 10,
           backgroundColor: 'white',
           justifyContent: 'center',
+          gap: 6,
         }}>
         <ThemeButton navigation={navigation} theme={'Wakgood'} />
+        <View style={styles.buttonBorder} />
+        <ThemeButton navigation={navigation} theme={'Wakdoo'} />
       </View>
       <View style={{marginTop: 20, marginBottom: 4}}>
         <Text style={styles.sectionText}>돌JOT</Text>

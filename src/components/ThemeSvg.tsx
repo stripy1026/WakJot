@@ -27,6 +27,9 @@ export const ThemeSvg = ({theme, width, height}: ThemeSvgProps) => {
       {theme === 'Wakgood' && (
         <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
       )}
+      {theme === 'Wakdoo' && (
+        <ThumbWakDo width={WIDTH} height={HEIGHT} fill={FILL} />
+      )}
       {theme === 'Ine' && <IneSvg width={WIDTH} height={HEIGHT} fill={FILL} />}
       {theme === 'Jingburger' && (
         <JingburgerSvg width={WIDTH} height={HEIGHT} fill={FILL} />
