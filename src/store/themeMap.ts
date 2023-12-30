@@ -13,7 +13,7 @@ export type ThemeProps = {
 
 export const themeMap = {
   Wakgood: {
-    backgroundImage: require('@/assets/tmp-tr.png'),
+    backgroundImage: require('@/assets/bg-wakgood.png'),
     color: color.WakGoodGreen,
     name: '우왁굳',
     backgroundColor: '#F4FFF9',
