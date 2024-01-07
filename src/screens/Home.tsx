@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   Alert,
   ImageBackground,
+  Keyboard,
   Platform,
   Pressable,
   StyleSheet,
@@ -149,7 +150,8 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
           backgroundColor: backgroundColor,
         }}>
         <View style={styles.textContainer}>
-          <View
+          <Pressable
+            onPress={() => Keyboard.dismiss()}
             style={{
               justifyContent: 'flex-end',
               alignItems: 'center',
@@ -167,7 +169,7 @@ export default function HomeScreen({navigation}: Props): JSX.Element {
             <Pressable onPress={() => navigation.navigate('Detail')}>
               <SettingSvg width={26} height={26} fill={buttonColor} />
             </Pressable>
-          </View>
+          </Pressable>
           <TextInput
             multiline
             autoComplete="off"
