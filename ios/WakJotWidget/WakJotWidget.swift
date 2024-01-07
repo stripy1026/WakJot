@@ -14,11 +14,11 @@ public struct WakJotModel:Codable {
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-      SimpleEntry(date: Date(), data: WakJotModel(text: "WakJot"))
+      SimpleEntry(date: Date(), data: WakJotModel(text: "왁Jot"))
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), data: WakJotModel(text: "WakJot"))
+        let entry = SimpleEntry(date: Date(), data: WakJotModel(text: "왁Jot"))
         completion(entry)
     }
 
@@ -28,7 +28,7 @@ struct Provider: TimelineProvider {
         let userDefaults = UserDefaults(suiteName: "group.wakjot")
         let jsonText = userDefaults?.string(forKey: "wakjotKey")
       
-        var input: WakJotModel = WakJotModel(text: "No data");
+        var input: WakJotModel = WakJotModel(text: "데이터가 없습니다");
       
         do {
           if jsonText != nil {
@@ -83,14 +83,14 @@ struct WakJotWidget: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("WakJot Widget")
-        .description("This is WakJot memo widget.")
+        .configurationDisplayName("왁Jot 위젯")
+        .description("위젯으로 메모 확인하기")
     }
 }
 
 #Preview(as: .systemSmall) {
     WakJotWidget()
 } timeline: {
-    SimpleEntry(date: .now, data: WakJotModel(text: "No data"))
-    SimpleEntry(date: .now, data: WakJotModel(text: "No data"))
+    SimpleEntry(date: .now, data: WakJotModel(text: "데이터가 없습니다"))
+    SimpleEntry(date: .now, data: WakJotModel(text: "데이터가 없습니다"))
 }
