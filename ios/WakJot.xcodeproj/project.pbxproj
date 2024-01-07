@@ -21,9 +21,9 @@
 		1669BD0B2B1CFB1B000DE7CD /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669BD092B1CFB1A000DE7CD /* SharedDefaults.m */; };
 		1669BD162B1E4BCE000DE7CD /* WidgetKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1669BD152B1E4BCE000DE7CD /* WidgetKitHelper.swift */; };
 		1669BD172B1E4BCE000DE7CD /* WidgetKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1669BD152B1E4BCE000DE7CD /* WidgetKitHelper.swift */; };
+		620D6159801C83764F4D60FF /* libPods-WakJot-WakJotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA44BEEB4ADF67A7D89887D /* libPods-WakJot-WakJotTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A89A95D88FA4423C15A77C00 /* libPods-WakJot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FFBF5C0844869707C08730 /* libPods-WakJot.a */; };
-		D89993236A7D645CE166FA44 /* libPods-WakJot-WakJotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECA1EE73E23148A5F01CDE6 /* libPods-WakJot-WakJotTests.a */; };
+		E15F0D78D2F16D9A23FDA06B /* libPods-WakJot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F797C09890BB27CD9927D387 /* libPods-WakJot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,14 +82,14 @@
 		1669BD102B1E496B000DE7CD /* WakJot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WakJot-Bridging-Header.h"; sourceTree = "<group>"; };
 		1669BD112B1E496B000DE7CD /* WakJotTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WakJotTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		1669BD152B1E4BCE000DE7CD /* WidgetKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKitHelper.swift; sourceTree = "<group>"; };
-		1F1B770053FBD7A0A51969D9 /* Pods-WakJot-WakJotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot-WakJotTests.release.xcconfig"; path = "Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests.release.xcconfig"; sourceTree = "<group>"; };
-		4B5B7516869179940D927D7A /* Pods-WakJot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot.release.xcconfig"; path = "Target Support Files/Pods-WakJot/Pods-WakJot.release.xcconfig"; sourceTree = "<group>"; };
-		5C9A35F6F28765B87269D265 /* Pods-WakJot-WakJotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot-WakJotTests.debug.xcconfig"; path = "Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		236FC07A386961CCBCB22FE7 /* Pods-WakJot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot.debug.xcconfig"; path = "Target Support Files/Pods-WakJot/Pods-WakJot.debug.xcconfig"; sourceTree = "<group>"; };
+		23F6B31329281587B86B9537 /* Pods-WakJot-WakJotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot-WakJotTests.release.xcconfig"; path = "Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests.release.xcconfig"; sourceTree = "<group>"; };
+		3595855157D6563FCEE63E5E /* Pods-WakJot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot.release.xcconfig"; path = "Target Support Files/Pods-WakJot/Pods-WakJot.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WakJot/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8ECA1EE73E23148A5F01CDE6 /* libPods-WakJot-WakJotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakJot-WakJotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92FFBF5C0844869707C08730 /* libPods-WakJot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakJot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A124C39A4E3FB82DBA80A107 /* Pods-WakJot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot.debug.xcconfig"; path = "Target Support Files/Pods-WakJot/Pods-WakJot.debug.xcconfig"; sourceTree = "<group>"; };
+		849B2AE1D568531C64ACC0D2 /* Pods-WakJot-WakJotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakJot-WakJotTests.debug.xcconfig"; path = "Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFA44BEEB4ADF67A7D89887D /* libPods-WakJot-WakJotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakJot-WakJotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F797C09890BB27CD9927D387 /* libPods-WakJot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakJot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D89993236A7D645CE166FA44 /* libPods-WakJot-WakJotTests.a in Frameworks */,
+				620D6159801C83764F4D60FF /* libPods-WakJot-WakJotTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A89A95D88FA4423C15A77C00 /* libPods-WakJot.a in Frameworks */,
+				E15F0D78D2F16D9A23FDA06B /* libPods-WakJot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,8 +169,8 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				1669BCE62B1BE869000DE7CD /* WidgetKit.framework */,
 				1669BCE82B1BE869000DE7CD /* SwiftUI.framework */,
-				92FFBF5C0844869707C08730 /* libPods-WakJot.a */,
-				8ECA1EE73E23148A5F01CDE6 /* libPods-WakJot-WakJotTests.a */,
+				F797C09890BB27CD9927D387 /* libPods-WakJot.a */,
+				BFA44BEEB4ADF67A7D89887D /* libPods-WakJot-WakJotTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,10 +218,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A124C39A4E3FB82DBA80A107 /* Pods-WakJot.debug.xcconfig */,
-				4B5B7516869179940D927D7A /* Pods-WakJot.release.xcconfig */,
-				5C9A35F6F28765B87269D265 /* Pods-WakJot-WakJotTests.debug.xcconfig */,
-				1F1B770053FBD7A0A51969D9 /* Pods-WakJot-WakJotTests.release.xcconfig */,
+				236FC07A386961CCBCB22FE7 /* Pods-WakJot.debug.xcconfig */,
+				3595855157D6563FCEE63E5E /* Pods-WakJot.release.xcconfig */,
+				849B2AE1D568531C64ACC0D2 /* Pods-WakJot-WakJotTests.debug.xcconfig */,
+				23F6B31329281587B86B9537 /* Pods-WakJot-WakJotTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -233,12 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WakJotTests" */;
 			buildPhases = (
-				641EEF2A06E9BA1BB303ACCF /* [CP] Check Pods Manifest.lock */,
+				89FE3679F175347F7B9E6F1A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				46BB13C73DD9AEB5D85B7EF6 /* [CP] Embed Pods Frameworks */,
-				582481C23C92915DDC9B0736 /* [CP] Copy Pods Resources */,
+				7316A848742E4704DF55DD2C /* [CP] Embed Pods Frameworks */,
+				7F1D56CE317D4ED4AA7EB260 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,15 +254,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WakJot" */;
 			buildPhases = (
-				7EDF5E79FB1B2BC6592B5CFE /* [CP] Check Pods Manifest.lock */,
+				4F21AE57F0F58FD01539AC49 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				1669BCF82B1BE86B000DE7CD /* Embed Foundation Extensions */,
-				FA571DE270917809EC88EA2A /* [CP] Embed Pods Frameworks */,
-				4F5C88594D0B021EF48132D1 /* [CP] Copy Pods Resources */,
+				6C4D220FB719727A5B0280B4 /* [CP] Embed Pods Frameworks */,
+				8B68516F8ABDF9F8E2BF21EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -379,80 +379,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		46BB13C73DD9AEB5D85B7EF6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F5C88594D0B021EF48132D1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		582481C23C92915DDC9B0736 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		641EEF2A06E9BA1BB303ACCF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WakJot-WakJotTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7EDF5E79FB1B2BC6592B5CFE /* [CP] Check Pods Manifest.lock */ = {
+		4F21AE57F0F58FD01539AC49 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -474,21 +401,90 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FA571DE270917809EC88EA2A /* [CP] Embed Pods Frameworks */ = {
+		6C4D220FB719727A5B0280B4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7316A848742E4704DF55DD2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F1D56CE317D4ED4AA7EB260 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot-WakJotTests/Pods-WakJot-WakJotTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89FE3679F175347F7B9E6F1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WakJot-WakJotTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B68516F8ABDF9F8E2BF21EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WakJot/Pods-WakJot-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -561,7 +557,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C9A35F6F28765B87269D265 /* Pods-WakJot-WakJotTests.debug.xcconfig */;
+			baseConfigurationReference = 849B2AE1D568531C64ACC0D2 /* Pods-WakJot-WakJotTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -593,7 +589,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F1B770053FBD7A0A51969D9 /* Pods-WakJot-WakJotTests.release.xcconfig */;
+			baseConfigurationReference = 23F6B31329281587B86B9537 /* Pods-WakJot-WakJotTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -621,7 +617,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A124C39A4E3FB82DBA80A107 /* Pods-WakJot.debug.xcconfig */;
+			baseConfigurationReference = 236FC07A386961CCBCB22FE7 /* Pods-WakJot.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -652,7 +648,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B5B7516869179940D927D7A /* Pods-WakJot.release.xcconfig */;
+			baseConfigurationReference = 3595855157D6563FCEE63E5E /* Pods-WakJot.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
